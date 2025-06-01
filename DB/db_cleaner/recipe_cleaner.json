@@ -1,0 +1,186 @@
+[
+  {
+    "recipe_name": "김치찌개",
+    "recipe_text": 
+      "1. 물(육수) 600ml를 끓인다. \n 2. 고기류가 있다면 물과 같이 넣고 끓인다. \n 3. 채소류(두부포함)를 손질한다. \n 4. 양념류(된장, 고추장, 고춧가루, 국간장, 김치국물)와 김치를 함께 넣어 끓인다. \n 5. 양념된 물이 끓어오르면 준비된 채소를 넣고 끓인다. \n 만약 참치류를 이용한다면 채소와 함께 넣고 끓인다. \n 6. 10-20분을 추가로 끓이면 완성.",
+    "ingredients": [
+      {
+        "category": "육수",
+        "name": "멸치다시마육수",
+        "amount": 600,
+        "unit": "ml",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "육수",
+        "name": "쌀뜬물",
+        "amount": 600,
+        "unit": "ml",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "육수",
+        "name": "물",
+        "amount": 600,
+        "unit": "ml",
+        "is_required": true,
+        "priority": 2
+      },
+      {
+        "category": "양념",
+        "name": "김치국물",
+        "amount": 10,
+        "unit": "ml",
+        "is_required": false,
+        "priority": 2
+      },
+      {
+        "category": "양념",
+        "name": "깍두기국물",
+        "amount": 10,
+        "unit": "ml",
+        "is_required": false,
+        "priority": 2
+      },
+
+      {
+        "category": "채소",
+        "name": "김치",
+        "amount": 0.5,
+        "unit": "포기",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+        "category": "채소",
+        "name": "대파",
+        "amount": 20,
+        "unit": "g",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "기타",
+        "name": "두부",
+        "amount": 0.5,
+        "unit": "모",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "채소",
+        "name": "청양고추",
+        "amount": 1,
+        "unit": "개",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "양념",
+        "name": "국간장",
+        "amount": 13,
+        "unit": "ml",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+        "category": "채소",
+        "name": "마늘",
+        "amount": 3,
+        "unit": "개",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+        "category": "가루",
+        "name": "고춧가루",
+        "amount": 20,
+        "unit": "g",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "양념",
+        "name": "설탕",
+        "amount": 5,
+        "unit": "g",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "양념",
+        "name": "고추장",
+        "amount": 5,
+        "unit": "g",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "양념",
+        "name": "된장",
+        "amount": 5,
+        "unit": "g",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "돼지고기",
+        "name": "돼지고기목살",
+        "amount": 200,
+        "unit": "g",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "돼지고기",
+        "name": "돼지고기안심",
+        "amount": 200,
+        "unit": "g",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "돼지고기",
+        "name": "돼지고기앞다리살",
+        "amount": 200,
+        "unit": "g",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "돼지고기",
+        "name": "돼지고기뒷다리살",
+        "amount": 200,
+        "unit": "g",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "돼지고기",
+        "name": "돼지고기등심",
+        "amount": 200,
+        "unit": "g",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "캔",
+        "name": "고추참치",
+        "amount": 1,
+        "unit": "캔",
+        "is_required": false,
+        "priority": 1
+      },
+      {
+        "category": "캔",
+        "name": "참치캔",
+        "amount": 1,
+        "unit": "캔",
+        "is_required": false,
+        "priority": 1
+      }
+    ]
+  }
+]
