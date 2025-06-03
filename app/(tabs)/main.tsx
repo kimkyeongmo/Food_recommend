@@ -13,19 +13,15 @@ import {
   View,
 } from "react-native";
 
-// 1. JSON 파일을 타입 단언과 함께 import!
+// JSON import + 타입 단언!
 import categorizedRaw from "../../DB/db_cleaner/categorized_ingredients.json";
-
-// 2. 타입 명확화
-type Ingredient = { name: string; unit: string };
-type Item = { name: string; count: number; unit: string; category: string };
-
-// 3. JSON 구조를 타입스크립트가 알 수 있게 단언!
 const categorized = categorizedRaw as {
   [category: string]: { [name: string]: string };
 };
 
-// 4. 카테고리별로 { name, unit } 배열 만들기
+type Ingredient = { name: string; unit: string };
+type Item = { name: string; count: number; unit: string; category: string };
+
 const categories = Object.keys(categorized);
 const ingredientsMap: { [category: string]: Ingredient[] } = {};
 categories.forEach((cat) => {
@@ -42,7 +38,12 @@ export default function HomeScreen() {
   const [selectedIngredient, setSelectedIngredient] = useState<Ingredient | null>(null);
   const [count, setCount] = useState("");
 
-  // 5. 재료 추가 함수
+  // ➡️ 삭제 함수 (index로 삭제)
+  const removeItem = (index: number) => {
+    setItems((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  // ➡️ 재료 추가 함수
   const addItem = () => {
     if (!selectedIngredient || !count.trim()) return;
     setItems([
@@ -54,7 +55,6 @@ export default function HomeScreen() {
         category: selectedCategory || "기타",
       },
     ]);
-    // 초기화
     setModalVisible(false);
     setSelectedCategory(null);
     setSelectedIngredient(null);
@@ -84,8 +84,20 @@ export default function HomeScreen() {
           numColumns={2}
           contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 32 }}
           showsVerticalScrollIndicator={false}
-          renderItem={({ item }) => (
+          renderItem={({ item, index }) => (
             <View style={styles.card}>
+              {/* 삭제 버튼 */}
+              <TouchableOpacity
+                onPress={() => removeItem(index)}
+                style={{
+                  position: "absolute",
+                  top: 10,
+                  right: 10,
+                  zIndex: 10,
+                }}
+              >
+                <Feather name="x-circle" size={22} color="#bbb" />
+              </TouchableOpacity>
               <Text style={styles.cardTitle}>{item.name}</Text>
               <Text style={styles.cardCount}>
                 수량: {item.count}
@@ -97,7 +109,7 @@ export default function HomeScreen() {
         />
       )}
 
-      {/* 카테고리/재료/수량 모델 */}
+      {/* 카테고리/재료/수량 모달 */}
       <Modal
         visible={modalVisible}
         animationType="slide"
@@ -212,29 +224,96 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#F8F9FA", paddingTop: 54 },
   header: {
-    flexDirection: "row", alignItems: "center", paddingHorizontal: 20,
-    marginBottom: 14, justifyContent: "space-between",
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 20,
+    marginBottom: 14,
+    justifyContent: "space-between",
   },
   headerTitle: { fontSize: 22, fontWeight: "bold", color: "#222" },
   emptyContainer: { flex: 1, justifyContent: "center", alignItems: "center" },
-  emptyText: { fontSize: 20, fontWeight: "600", marginBottom: 12, color: "#888" },
+  emptyText: {
+    fontSize: 20,
+    fontWeight: "600",
+    marginBottom: 12,
+    color: "#888",
+  },
   card: {
-    flex: 1, backgroundColor: "#fff", margin: 8, borderRadius: 18,
-    paddingVertical: 26, paddingHorizontal: 12, alignItems: "center",
-    shadowColor: "#000", shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.08, shadowRadius: 6, elevation: 4,
+    flex: 1,
+    backgroundColor: "#fff",
+    margin: 8,
+    borderRadius: 18,
+    paddingVertical: 26,
+    paddingHorizontal: 12,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
+    shadowRadius: 6,
+    elevation: 4,
+    position: "relative", // 삭제 버튼 위치 고정!
   },
   cardTitle: { fontSize: 18, fontWeight: "600", color: "#222", marginBottom: 8 },
   cardCount: { fontSize: 15, color: "#777" },
   cardCat: { fontSize: 12, color: "#bbb", marginTop: 4 },
-  modalWrap: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0,0,0,0.2)" },
-  modalBox: { width: 310, backgroundColor: "#fff", borderRadius: 18, padding: 22, shadowColor: "#000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.08, shadowRadius: 8, elevation: 6 },
-  modalTitle: { fontSize: 17, fontWeight: "bold", marginBottom: 14, color: "#222", textAlign: "center" },
-  catBtn: { backgroundColor: "#f4f4f8", paddingHorizontal: 17, paddingVertical: 10, borderRadius: 13, margin: 7 },
+  modalWrap: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0,0,0,0.2)",
+  },
+  modalBox: {
+    width: 310,
+    backgroundColor: "#fff",
+    borderRadius: 18,
+    padding: 22,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  modalTitle: {
+    fontSize: 17,
+    fontWeight: "bold",
+    marginBottom: 14,
+    color: "#222",
+    textAlign: "center",
+  },
+  catBtn: {
+    backgroundColor: "#f4f4f8",
+    paddingHorizontal: 17,
+    paddingVertical: 10,
+    borderRadius: 13,
+    margin: 7,
+  },
   catBtnText: { fontSize: 15, fontWeight: "600", color: "#555" },
-  ingBtn: { backgroundColor: "#f0f6fc", paddingHorizontal: 14, paddingVertical: 8, borderRadius: 11, margin: 6, borderWidth: 1, borderColor: "#d1e1fa" },
+  ingBtn: {
+    backgroundColor: "#f0f6fc",
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 11,
+    margin: 6,
+    borderWidth: 1,
+    borderColor: "#d1e1fa",
+  },
   ingBtnText: { fontSize: 15, color: "#337" },
-  input: { borderWidth: 1, borderColor: "#eee", borderRadius: 12, padding: 10, marginBottom: 12, fontSize: 16, textAlign: "center" },
-  modalBtn: { paddingHorizontal: 24, paddingVertical: 10, borderRadius: 8, backgroundColor: "#eee", alignItems: "center", marginTop: 10 },
+  input: {
+    borderWidth: 1,
+    borderColor: "#eee",
+    borderRadius: 12,
+    padding: 10,
+    marginBottom: 12,
+    fontSize: 16,
+    textAlign: "center",
+  },
+  modalBtn: {
+    paddingHorizontal: 24,
+    paddingVertical: 10,
+    borderRadius: 8,
+    backgroundColor: "#eee",
+    alignItems: "center",
+    marginTop: 10,
+  },
   backBtn: { marginTop: 8, alignSelf: "center" },
 });
