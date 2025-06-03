@@ -1,21 +1,63 @@
 import { Feather } from "@expo/vector-icons";
 import React, { useState } from "react";
-import { FlatList, KeyboardAvoidingView, Modal, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import {
+  FlatList,
+  KeyboardAvoidingView,
+  Modal,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
-type Item = { name: string; count: number };
+// 1. JSON 파일을 타입 단언과 함께 import!
+import categorizedRaw from "../../DB/db_cleaner/categorized_ingredients.json";
+
+// 2. 타입 명확화
+type Ingredient = { name: string; unit: string };
+type Item = { name: string; count: number; unit: string; category: string };
+
+// 3. JSON 구조를 타입스크립트가 알 수 있게 단언!
+const categorized = categorizedRaw as {
+  [category: string]: { [name: string]: string };
+};
+
+// 4. 카테고리별로 { name, unit } 배열 만들기
+const categories = Object.keys(categorized);
+const ingredientsMap: { [category: string]: Ingredient[] } = {};
+categories.forEach((cat) => {
+  ingredientsMap[cat] = Object.entries(categorized[cat]).map(([name, unit]) => ({
+    name,
+    unit,
+  }));
+});
 
 export default function HomeScreen() {
   const [items, setItems] = useState<Item[]>([]);
   const [modalVisible, setModalVisible] = useState(false);
-  const [name, setName] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedIngredient, setSelectedIngredient] = useState<Ingredient | null>(null);
   const [count, setCount] = useState("");
 
-  // 재료 추가 함수
+  // 5. 재료 추가 함수
   const addItem = () => {
-    if (!name.trim() || !count.trim()) return;
-    setItems([...items, { name: name.trim(), count: Number(count) }]);
+    if (!selectedIngredient || !count.trim()) return;
+    setItems([
+      ...items,
+      {
+        name: selectedIngredient.name,
+        count: Number(count),
+        unit: selectedIngredient.unit,
+        category: selectedCategory || "기타",
+      },
+    ]);
+    // 초기화
     setModalVisible(false);
-    setName("");
+    setSelectedCategory(null);
+    setSelectedIngredient(null);
     setCount("");
   };
 
@@ -45,51 +87,121 @@ export default function HomeScreen() {
           renderItem={({ item }) => (
             <View style={styles.card}>
               <Text style={styles.cardTitle}>{item.name}</Text>
-              <Text style={styles.cardCount}>수량: {item.count}</Text>
+              <Text style={styles.cardCount}>
+                수량: {item.count}
+                {item.unit}
+              </Text>
+              <Text style={styles.cardCat}>{item.category}</Text>
             </View>
           )}
         />
       )}
 
-      {/* 추가 모달 */}
+      {/* 카테고리/재료/수량 모델 */}
       <Modal
         visible={modalVisible}
         animationType="slide"
         transparent
-        onRequestClose={() => setModalVisible(false)}
+        onRequestClose={() => {
+          setModalVisible(false);
+          setSelectedCategory(null);
+          setSelectedIngredient(null);
+          setCount("");
+        }}
       >
-        <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined} style={styles.modalWrap}>
+        <KeyboardAvoidingView
+          behavior={Platform.OS === "ios" ? "padding" : undefined}
+          style={styles.modalWrap}
+        >
           <View style={styles.modalBox}>
-            <Text style={styles.modalTitle}>재료 추가</Text>
-            <TextInput
-              style={styles.input}
-              placeholder="재료 이름 (예: 계란)"
-              value={name}
-              onChangeText={setName}
-            />
-            <TextInput
-              style={styles.input}
-              placeholder="수량 (숫자만)"
-              value={count}
-              onChangeText={text => {
-                // 숫자만 허용
-                if (/^\d*$/.test(text)) setCount(text);
-              }}
-              keyboardType="numeric"
-              maxLength={4}
-            />
-            <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-              <TouchableOpacity style={styles.modalBtn} onPress={() => setModalVisible(false)}>
-                <Text style={{ color: "#666" }}>취소</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={[styles.modalBtn, { backgroundColor: "#222" }]}
-                onPress={addItem}
-                disabled={!name.trim() || !count.trim()}
-              >
-                <Text style={{ color: "#fff" }}>추가</Text>
-              </TouchableOpacity>
-            </View>
+            {!selectedCategory ? (
+              <>
+                <Text style={styles.modalTitle}>카테고리를 선택하세요</Text>
+                <ScrollView
+                  contentContainerStyle={{
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                  }}
+                >
+                  {categories.map((cat) => (
+                    <TouchableOpacity
+                      key={cat}
+                      style={styles.catBtn}
+                      onPress={() => setSelectedCategory(cat)}
+                    >
+                      <Text style={styles.catBtnText}>{cat}</Text>
+                    </TouchableOpacity>
+                  ))}
+                </ScrollView>
+              </>
+            ) : !selectedIngredient ? (
+              <>
+                <Text style={styles.modalTitle}>{selectedCategory} 재료 선택</Text>
+                <ScrollView
+                  contentContainerStyle={{
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                  }}
+                >
+                  {ingredientsMap[selectedCategory].map(({ name, unit }) => (
+                    <TouchableOpacity
+                      key={name}
+                      style={styles.ingBtn}
+                      onPress={() => setSelectedIngredient({ name, unit })}
+                    >
+                      <Text style={styles.ingBtnText}>{name}</Text>
+                    </TouchableOpacity>
+                  ))}
+                </ScrollView>
+                <TouchableOpacity
+                  style={styles.backBtn}
+                  onPress={() => setSelectedCategory(null)}
+                >
+                  <Text style={{ color: "#888" }}>← 카테고리 선택으로</Text>
+                </TouchableOpacity>
+              </>
+            ) : (
+              <>
+                <Text style={styles.modalTitle}>
+                  {selectedIngredient.name}의 수량을 입력하세요
+                </Text>
+                <Text style={{ fontSize: 14, color: "#999", marginBottom: 12 }}>
+                  단위: {selectedIngredient.unit}
+                </Text>
+                <TextInput
+                  style={styles.input}
+                  placeholder={`수량 (${selectedIngredient.unit})`}
+                  value={count}
+                  onChangeText={(text) => {
+                    if (/^\d*$/.test(text)) setCount(text);
+                  }}
+                  keyboardType="numeric"
+                  maxLength={4}
+                />
+                <View
+                  style={{
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <TouchableOpacity
+                    style={styles.modalBtn}
+                    onPress={() => setSelectedIngredient(null)}
+                  >
+                    <Text style={{ color: "#666" }}>이전</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={[styles.modalBtn, { backgroundColor: "#222" }]}
+                    onPress={addItem}
+                    disabled={!count.trim()}
+                  >
+                    <Text style={{ color: "#fff" }}>추가</Text>
+                  </TouchableOpacity>
+                </View>
+              </>
+            )}
           </View>
         </KeyboardAvoidingView>
       </Modal>
@@ -100,11 +212,8 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#F8F9FA", paddingTop: 54 },
   header: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingHorizontal: 20,
-    marginBottom: 14,
-    justifyContent: "space-between",
+    flexDirection: "row", alignItems: "center", paddingHorizontal: 20,
+    marginBottom: 14, justifyContent: "space-between",
   },
   headerTitle: { fontSize: 22, fontWeight: "bold", color: "#222" },
   emptyContainer: { flex: 1, justifyContent: "center", alignItems: "center" },
@@ -117,9 +226,15 @@ const styles = StyleSheet.create({
   },
   cardTitle: { fontSize: 18, fontWeight: "600", color: "#222", marginBottom: 8 },
   cardCount: { fontSize: 15, color: "#777" },
+  cardCat: { fontSize: 12, color: "#bbb", marginTop: 4 },
   modalWrap: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0,0,0,0.2)" },
-  modalBox: { width: 280, backgroundColor: "#fff", borderRadius: 18, padding: 24, shadowColor: "#000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.08, shadowRadius: 8, elevation: 6 },
-  modalTitle: { fontSize: 19, fontWeight: "bold", marginBottom: 14, color: "#222", textAlign: "center" },
-  input: { borderWidth: 1, borderColor: "#eee", borderRadius: 12, padding: 10, marginBottom: 12, fontSize: 16 },
+  modalBox: { width: 310, backgroundColor: "#fff", borderRadius: 18, padding: 22, shadowColor: "#000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.08, shadowRadius: 8, elevation: 6 },
+  modalTitle: { fontSize: 17, fontWeight: "bold", marginBottom: 14, color: "#222", textAlign: "center" },
+  catBtn: { backgroundColor: "#f4f4f8", paddingHorizontal: 17, paddingVertical: 10, borderRadius: 13, margin: 7 },
+  catBtnText: { fontSize: 15, fontWeight: "600", color: "#555" },
+  ingBtn: { backgroundColor: "#f0f6fc", paddingHorizontal: 14, paddingVertical: 8, borderRadius: 11, margin: 6, borderWidth: 1, borderColor: "#d1e1fa" },
+  ingBtnText: { fontSize: 15, color: "#337" },
+  input: { borderWidth: 1, borderColor: "#eee", borderRadius: 12, padding: 10, marginBottom: 12, fontSize: 16, textAlign: "center" },
   modalBtn: { paddingHorizontal: 24, paddingVertical: 10, borderRadius: 8, backgroundColor: "#eee", alignItems: "center", marginTop: 10 },
+  backBtn: { marginTop: 8, alignSelf: "center" },
 });
