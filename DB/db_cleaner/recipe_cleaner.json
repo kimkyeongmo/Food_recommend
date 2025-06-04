@@ -61,5 +61,54 @@
         "priority": [1, 1]
       }
     ]
+  },
+
+  {
+    "recipe_name": "꼬막무침",
+    "recipe_text": 
+      "1. 야채들은 잘게 썰어 준다.  \n 2. 찬물에 꼬막을 넣고 삶는다.  \n 3. 삶는 도중 껍질이 살짝 벌어질 때 불을 끄고 체에 걸러내 껍질을 제거한다. \n 4. 간장, 고춧가루, 다진 마늘을 넣고 버무려 완성한다. \n 5. (선택) 설탕,  참기름, 깨소금(참깨)을 추가한다.",
+    "ingredients": [
+      {
+        "category": "해산물",
+        "name": "꼬막",
+        "amount": 1000, 
+        "unit": "g",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+        "category": "채소",
+        "name": ["마늘", "양파", "대파", "당근", "풋고추"],
+        "amount": [2, 0.2, 1, 50, 1],
+        "unit": ["개", "개", "g", "g", "g"],
+        "is_required": [true, true, true, true, true],
+        "priority": [1, 2, 2, 3, 3]
+      },
+      {
+        "category": "양념",
+        "name": ["간장", "고춧가루", "다진 마늘"],
+        "amount": [50, 20, 10],
+        "unit": ["ml", "g", "g"],
+        "is_required": [true, true, true],
+        "priority": [1, 1, 1]
+      },
+            {
+        "category": "가루",
+        "name": ["고춧가루"],
+        "amount": [20],
+        "unit": ["g"],
+        "is_required": [true],
+        "priority": [1]
+      },
+      {
+        "category": "기타",
+        "name": ["설탕", "참기름", "깨소금"],
+        "amount": [5, 5, 5],
+        "unit": ["g", "g", "g"],
+        "is_required": [false, false, false],
+        "priority": [1, 1, 1]
+      }
+    ]
   }
+
 ]
