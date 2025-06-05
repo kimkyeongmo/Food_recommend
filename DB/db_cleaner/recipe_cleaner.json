@@ -6,60 +6,27 @@
     "ingredients": [
       {
         "category": "육수",
-        "name": "멸치다시마육수",
-        "amount": 600,
-        "unit": "ml",
-        "is_required": false,
-        "priority": 1
-      },
-      {
-        "category": "육수",
-        "name": "쌀뜬물",
-        "amount": 600,
-        "unit": "ml",
-        "is_required": false,
-        "priority": 1
-      },
-      {
-        "category": "육수",
-        "name": "물",
-        "amount": 600,
-        "unit": "ml",
-        "is_required": true,
-        "priority": 2
+        "name": ["멸치다시마육수"," 쌀뜬물", "물"],
+        "amount": [600, 600, 600],
+        "unit": ["ml", "ml", "ml"],
+        "is_required": [false, false, true],
+        "priority": [1, 1, 2]
       },
       {
         "category": "양념",
-        "name": "김치국물",
-        "amount": 10,
-        "unit": "ml",
-        "is_required": false,
-        "priority": 2
-      },
-      {
-        "category": "양념",
-        "name": "깍두기국물",
-        "amount": 10,
-        "unit": "ml",
-        "is_required": false,
-        "priority": 2
-      },
-
-      {
-        "category": "채소",
-        "name": "김치",
-        "amount": 0.5,
-        "unit": "포기",
-        "is_required": true,
-        "priority": 1
+        "name": ["김치국물", "깍두기국물", "국간장", "설탕", "고추장", "된장"],
+        "amount": [10, 10, 13, 5, 5, 5],
+        "unit": ["ml", "ml", "ml", "g", "g", "g"],
+        "is_required": [false, false, true, false, false, false],
+        "priority": [2, 2, 1, 1, 1, 1]
       },
       {
         "category": "채소",
-        "name": "대파",
-        "amount": 20,
-        "unit": "g",
-        "is_required": false,
-        "priority": 1
+        "name": ["김치", "대파", "청양고추", "마늘"],
+        "amount": [0.5, 20, 1, 3],
+        "unit": ["포기", "g", "개", "개"],
+        "is_required": [true, false, false, true],
+        "priority": [1, 1, 1, 1]
       },
       {
         "category": "기타",
@@ -67,30 +34,6 @@
         "amount": 0.5,
         "unit": "모",
         "is_required": false,
-        "priority": 1
-      },
-      {
-        "category": "채소",
-        "name": "청양고추",
-        "amount": 1,
-        "unit": "개",
-        "is_required": false,
-        "priority": 1
-      },
-      {
-        "category": "양념",
-        "name": "국간장",
-        "amount": 13,
-        "unit": "ml",
-        "is_required": true,
-        "priority": 1
-      },
-      {
-        "category": "채소",
-        "name": "마늘",
-        "amount": 3,
-        "unit": "개",
-        "is_required": true,
         "priority": 1
       },
       {
@@ -102,85 +45,70 @@
         "priority": 1
       },
       {
-        "category": "양념",
-        "name": "설탕",
-        "amount": 5,
-        "unit": "g",
-        "is_required": false,
-        "priority": 1
-      },
-      {
-        "category": "양념",
-        "name": "고추장",
-        "amount": 5,
-        "unit": "g",
-        "is_required": false,
-        "priority": 1
-      },
-      {
-        "category": "양념",
-        "name": "된장",
-        "amount": 5,
-        "unit": "g",
-        "is_required": false,
-        "priority": 1
-      },
-      {
         "category": "돼지고기",
-        "name": "돼지고기목살",
-        "amount": 200,
-        "unit": "g",
-        "is_required": false,
-        "priority": 1
-      },
-      {
-        "category": "돼지고기",
-        "name": "돼지고기안심",
-        "amount": 200,
-        "unit": "g",
-        "is_required": false,
-        "priority": 1
-      },
-      {
-        "category": "돼지고기",
-        "name": "돼지고기앞다리살",
-        "amount": 200,
-        "unit": "g",
-        "is_required": false,
-        "priority": 1
-      },
-      {
-        "category": "돼지고기",
-        "name": "돼지고기뒷다리살",
-        "amount": 200,
-        "unit": "g",
-        "is_required": false,
-        "priority": 1
-      },
-      {
-        "category": "돼지고기",
-        "name": "돼지고기등심",
-        "amount": 200,
-        "unit": "g",
-        "is_required": false,
-        "priority": 1
+        "name": ["돼지고기목살","돼지고기안심", "돼지고기앞다리살", "돼지고기뒷다리살", "돼지고기등심"],
+        "amount": [200, 200, 200, 200, 200],
+        "unit": ["g", "g", "g", "g", "g"],
+        "is_required": [false,false, false, false, false],
+        "priority": [1,1]
       },
       {
         "category": "캔",
-        "name": "고추참치",
-        "amount": 1,
-        "unit": "캔",
-        "is_required": false,
+        "name": ["고추참치", "참치캔"],
+        "amount": [1, 1],
+        "unit": ["캔", "캔"],
+        "is_required": [false, false],
+        "priority": [1, 1]
+      }
+    ]
+  },
+
+  {
+    "recipe_name": "꼬막무침",
+    "recipe_text": 
+      "1. 야채들은 잘게 썰어 준다.  \n 2. 찬물에 꼬막을 넣고 삶는다.  \n 3. 삶는 도중 껍질이 살짝 벌어질 때 불을 끄고 체에 걸러내 껍질을 제거한다. \n 4. 간장, 고춧가루, 다진 마늘을 넣고 버무려 완성한다. \n 5. (선택) 설탕,  참기름, 깨소금(참깨)을 추가한다.",
+    "ingredients": [
+      {
+        "category": "해산물",
+        "name": "꼬막",
+        "amount": 1000, 
+        "unit": "g",
+        "is_required": true,
         "priority": 1
       },
       {
-        "category": "캔",
-        "name": "참치캔",
-        "amount": 1,
-        "unit": "캔",
-        "is_required": false,
-        "priority": 1
+        "category": "채소",
+        "name": ["마늘", "양파", "대파", "당근", "풋고추"],
+        "amount": [2, 0.2, 1, 50, 1],
+        "unit": ["개", "개", "g", "g", "g"],
+        "is_required": [true, true, true, true, true],
+        "priority": [1, 2, 2, 3, 3]
+      },
+      {
+        "category": "양념",
+        "name": ["간장", "고춧가루", "다진 마늘"],
+        "amount": [50, 20, 10],
+        "unit": ["ml", "g", "g"],
+        "is_required": [true, true, true],
+        "priority": [1, 1, 1]
+      },
+            {
+        "category": "가루",
+        "name": ["고춧가루"],
+        "amount": [20],
+        "unit": ["g"],
+        "is_required": [true],
+        "priority": [1]
+      },
+      {
+        "category": "기타",
+        "name": ["설탕", "참기름", "깨소금"],
+        "amount": [5, 5, 5],
+        "unit": ["g", "g", "g"],
+        "is_required": [false, false, false],
+        "priority": [1, 1, 1]
       }
     ]
   }
+
 ]
