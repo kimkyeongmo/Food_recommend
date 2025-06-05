@@ -24,6 +24,15 @@ export default function Layout() {
             ),
           }}
         />
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: "즐겨찾기",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="star" size={size} color={color} />
+            ),
+          }}
+        />
       </Tabs>
     </ItemsProvider>
   );

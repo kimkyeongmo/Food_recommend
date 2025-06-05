@@ -1,7 +1,30 @@
+import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import React, { useState } from "react";
 import { FlatList, KeyboardAvoidingView, Modal, Platform, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useItems } from "./ItemsContext";
-// json import (tsconfig resolveJsonModule: true 필요)
+
+const CATEGORY_ICON: { [key: string]: { icon: React.ReactNode } } = {
+  "가루": {icon: <MaterialCommunityIcons name="food-variant" size={30} color="#bca16a" />},
+  "견과류": {icon: <MaterialCommunityIcons name="peanut" size={30} color="#c17d4c" />},
+  "기름": {icon: <MaterialCommunityIcons name="oil" size={30} color="#ffdb6a" />},
+  "닭고기":{icon: <MaterialCommunityIcons name="food-drumstick" size={30} color="#f7a35c" />},
+  "돼지고기":{icon: <MaterialCommunityIcons name="pig-variant" size={30} color="#f3b2b1" />},
+  "소고기": {icon: <MaterialCommunityIcons name="cow" size={30} color="#a47551" />},
+  "해산물": { icon: <MaterialCommunityIcons name="fish" size={30} color="#46a0b7" /> },
+  "캔": { icon: <MaterialCommunityIcons name="bottle-soda-classic-outline" size={30} color="#b8c1cd" /> },
+  "버섯": {icon: <MaterialCommunityIcons name="mushroom-outline" size={30} color="#bb7862" />},
+  "채소": {icon: <Ionicons name="leaf" size={30} color="#69c56d" /> },
+  "육류": {icon: <MaterialCommunityIcons name="food-drumstick" size={30} color="#e17a46" /> },
+  "양념": {icon: <MaterialCommunityIcons name="shaker-outline" size={30} color="#d6b75b" /> },
+  "소스": {icon: <MaterialCommunityIcons name="bottle-tonic-outline" size={30} color="#ee8b6c" /> },
+  "육수": { icon: <MaterialCommunityIcons name="pot-steam" size={30} color="#e6a469" /> },
+  "유제품": {icon: <MaterialCommunityIcons name="glass-mug-variant" size={30} color="#f5e1a4" />},
+  "기타": { icon: <Ionicons name="apps-outline" size={30} color="#4eb0d4" /> },
+  "면": { icon: <MaterialCommunityIcons name="noodles" size={30} color="#dfc264" /> },
+
+  // 필요시 기타 카테고리 추가...
+};
+
 import categorizedRaw from "../../DB/db_cleaner/categorized_ingredients.json";
 const categorized = categorizedRaw as {
   [category: string]: { [name: string]: string };
@@ -98,12 +121,21 @@ export default function MainScreen() {
             {!selectedCategory ? (
               <>
                 <Text style={styles.modalTitle}>카테고리를 선택하세요</Text>
-                <ScrollView contentContainerStyle={{ flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}>
-                  {categories.map(cat => (
-                    <TouchableOpacity key={cat} style={styles.catBtn} onPress={() => setSelectedCategory(cat)}>
-                      <Text style={styles.catBtnText}>{cat}</Text>
-                    </TouchableOpacity>
-                  ))}
+                <ScrollView contentContainerStyle={styles.catGridWrap}>
+                  <View style={styles.catGridContainer}>
+                    {categories.map((cat, idx) => (
+                      <TouchableOpacity
+                        key={cat}
+                        style={styles.catBlock}
+                        onPress={() => setSelectedCategory(cat)}
+                      >
+                        <View style={{ marginBottom: 4 }}>
+                          {CATEGORY_ICON[cat]?.icon ?? <Ionicons name="help-outline" size={30} color="#bbb" />}
+                        </View>
+                        <Text style={styles.catBtnText}>{cat}</Text>
+                      </TouchableOpacity>
+                    ))}
+                  </View>
                 </ScrollView>
               </>
             ) : !selectedIngredient ? (
@@ -161,30 +193,121 @@ export default function MainScreen() {
 
 const styles = StyleSheet.create({
   header: {
-    flexDirection: "row", alignItems: "center", justifyContent: "space-between",
-    padding: 16, backgroundColor: "#fff", borderBottomWidth: 1, borderBottomColor: "#eee"
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: 16,
+    backgroundColor: "#fff",
+    borderBottomWidth: 1,
+    borderBottomColor: "#eee",
   },
   title: { fontSize: 22, fontWeight: "bold", color: "#222" },
-  addBtn: { backgroundColor: "#39f", borderRadius: 10, paddingHorizontal: 16, paddingVertical: 7 },
+  addBtn: {
+    backgroundColor: "#39f",
+    borderRadius: 10,
+    paddingHorizontal: 16,
+    paddingVertical: 7,
+  },
   empty: { flex: 1, alignItems: "center", justifyContent: "center" },
   itemCard: {
-    backgroundColor: "#fff", borderRadius: 14, marginBottom: 10,
-    padding: 16, flexDirection: "row", alignItems: "center"
+    backgroundColor: "#fff",
+    borderRadius: 14,
+    marginBottom: 10,
+    padding: 16,
+    flexDirection: "row",
+    alignItems: "center",
   },
   itemName: { fontWeight: "bold", fontSize: 17, flex: 1 },
   itemDetail: { color: "#666", fontSize: 15, marginRight: 12 },
-  delBtn: { backgroundColor: "#f33", borderRadius: 8, paddingVertical: 5, paddingHorizontal: 12 },
-  modalWrap: {
-    ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.15)",
-    alignItems: "center", justifyContent: "center", zIndex: 9999
+  delBtn: {
+    backgroundColor: "#f33",
+    borderRadius: 8,
+    paddingVertical: 5,
+    paddingHorizontal: 12,
   },
-  modalBox: { backgroundColor: "#fff", borderRadius: 18, padding: 20, width: 310, elevation: 6 },
-  modalTitle: { fontSize: 18, fontWeight: "bold", marginBottom: 14, textAlign: "center" },
-  catBtn: { backgroundColor: "#f4f4f8", paddingHorizontal: 17, paddingVertical: 10, borderRadius: 13, margin: 7 },
-  catBtnText: { fontSize: 15, fontWeight: "600", color: "#555" },
-  ingBtn: { backgroundColor: "#f0f6fc", paddingHorizontal: 14, paddingVertical: 8, borderRadius: 11, margin: 6, borderWidth: 1, borderColor: "#d1e1fa" },
+  modalWrap: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(0,0,0,0.15)",
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 9999,
+  },
+  modalBox: {
+    backgroundColor: "#fff",
+    borderRadius: 18,
+    padding: 20,
+    width: 310,
+    elevation: 6,
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 14,
+    textAlign: "center",
+  },
+
+  // 👇 카테고리 블럭 그리드 + 아이콘 스타일
+  catGridWrap: {
+    paddingBottom: 12,
+    paddingHorizontal: 4,
+  },
+  catGridContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "flex-start",
+    width: "100%",
+  },
+  catBlock: {
+    width: "47%",
+    margin: "1.5%",
+    height: 80,
+    backgroundColor: "#f4f4f8",
+    borderRadius: 16,
+    alignItems: "center",
+    justifyContent: "center",
+    elevation: 2,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.04,
+    shadowRadius: 4,
+    // 아이콘+텍스트 위아래 중앙정렬
+    flexDirection: "column",
+  },
+  catBtnText: {
+    fontSize: 18,
+    fontWeight: "600",
+    color: "#555",
+    marginTop: 4,
+  },
+
+  // 👆 여기까지 카테고리 그리드+아이콘 스타일
+
+  ingBtn: {
+    backgroundColor: "#f0f6fc",
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 11,
+    margin: 6,
+    borderWidth: 1,
+    borderColor: "#d1e1fa",
+  },
   ingBtnText: { fontSize: 15, color: "#337" },
-  input: { borderWidth: 1, borderColor: "#eee", borderRadius: 12, padding: 10, marginBottom: 12, fontSize: 16, textAlign: "center" },
-  modalBtn: { paddingHorizontal: 24, paddingVertical: 10, borderRadius: 8, backgroundColor: "#eee", alignItems: "center", marginTop: 10 },
+  input: {
+    borderWidth: 1,
+    borderColor: "#eee",
+    borderRadius: 12,
+    padding: 10,
+    marginBottom: 12,
+    fontSize: 16,
+    textAlign: "center",
+  },
+  modalBtn: {
+    paddingHorizontal: 24,
+    paddingVertical: 10,
+    borderRadius: 8,
+    backgroundColor: "#eee",
+    alignItems: "center",
+    marginTop: 10,
+  },
   backBtn: { marginTop: 8, alignSelf: "center" },
 });
