@@ -1,5 +1,6 @@
+import { useRouter } from "expo-router";
 import React from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useItems } from "./ItemsContext";
 
 // ===== 레시피 예시 =====
@@ -71,6 +72,7 @@ function getRecipeMatches(items: { name: string; count: number; unit: string; ca
 // ===== explore.tsx 메인 컴포넌트 =====
 export default function ExploreScreen() {
   const { items } = useItems();
+  const router = useRouter();
   const matches = getRecipeMatches(items, recipeData);
   matches.sort((a, b) => b.matched.length - a.matched.length);
 
@@ -81,7 +83,14 @@ export default function ExploreScreen() {
         keyExtractor={item => item.recipe.name}
         contentContainerStyle={{ paddingVertical: 10 }}
         renderItem={({ item }) => (
-          <View style={styles.card}>
+          <TouchableOpacity
+            style={styles.card}
+            activeOpacity={0.85}
+            onPress={() => router.push({
+              pathname: "/recipe_detail",
+              params: { recipe: JSON.stringify(item.recipe) }
+            })}
+          >
             <Text style={styles.title}>{item.recipe.name}</Text>
             <Text style={styles.matchInfo}>
               <Text style={styles.matchCount}>
@@ -101,13 +110,12 @@ export default function ExploreScreen() {
             {item.recipe.description && (
               <Text style={styles.desc}>{item.recipe.description}</Text>
             )}
-          </View>
+          </TouchableOpacity>
         )}
       />
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   card: {
     backgroundColor: "#fff",
