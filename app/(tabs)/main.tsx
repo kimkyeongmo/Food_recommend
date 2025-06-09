@@ -3,27 +3,46 @@ import React, { useState } from "react";
 import { FlatList, KeyboardAvoidingView, Modal, Platform, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useItems } from "./ItemsContext";
 
-const CATEGORY_ICON: { [key: string]: { icon: React.ReactNode } } = {
-  "가루": {icon: <MaterialCommunityIcons name="food-variant" size={30} color="#bca16a" />},
-  "견과류": {icon: <MaterialCommunityIcons name="peanut" size={30} color="#c17d4c" />},
-  "기름": {icon: <MaterialCommunityIcons name="oil" size={30} color="#ffdb6a" />},
-  "닭고기":{icon: <MaterialCommunityIcons name="food-drumstick" size={30} color="#f7a35c" />},
-  "돼지고기":{icon: <MaterialCommunityIcons name="pig-variant" size={30} color="#f3b2b1" />},
-  "소고기": {icon: <MaterialCommunityIcons name="cow" size={30} color="#a47551" />},
+export const CATEGORY_ICON: { [key: string]: { icon: React.ReactNode } } = {
+  // 채소/곡류
+  "뿌리채소": { icon: <MaterialCommunityIcons name="carrot" size={30} color="#ff9e42" /> },
+  "잎줄기채소": { icon: <MaterialCommunityIcons name="leaf" size={30} color="#82c67a" /> },
+  "열매채소/과채류": { icon: <MaterialCommunityIcons name="food-apple" size={30} color="#f47171" /> },
+  "버섯류": { icon: <MaterialCommunityIcons name="mushroom" size={30} color="#bb7862" /> },
+  "건어물": { icon: <MaterialCommunityIcons name="fish" size={30} color="#4fb5c4" /> },
+  "곡류/잡곡": { icon: <MaterialCommunityIcons name="rice" size={30} color="#e6be7a" /> },
+  "면류": { icon: <MaterialCommunityIcons name="noodles" size={30} color="#dfc264" /> },
+  "두부/콩/콩가공품": { icon: <MaterialCommunityIcons name="soy-sauce" size={30} color="#dbad74" /> },
+  "달걀류": { icon: <MaterialCommunityIcons name="egg" size={30} color="#f6db57" /> },
+  "유제품": { icon: <MaterialCommunityIcons name="cheese" size={30} color="#ffd86e" /> },
+  "견과/씨앗류": { icon: <MaterialCommunityIcons name="peanut" size={30} color="#c17d4c" /> },
+  "과일류": { icon: <MaterialCommunityIcons name="fruit-cherries" size={30} color="#e576ae" /> },
+  // 육류/어패류/햄
+  "육류-소": { icon: <MaterialCommunityIcons name="cow" size={30} color="#a47551" /> },
+  "육류-돼지": { icon: <MaterialCommunityIcons name="pig-variant" size={30} color="#f3b2b1" /> },
+  "육류-닭": { icon: <MaterialCommunityIcons name="food-drumstick" size={30} color="#f7a35c" /> },
+  "육류-오리": { icon: <MaterialCommunityIcons name="food-turkey" size={28} color="#be946d" /> },
+  "햄/가공육": { icon: <MaterialCommunityIcons name="sausage" size={28} color="#dc8b7d" /> },
   "해산물": { icon: <MaterialCommunityIcons name="fish" size={30} color="#46a0b7" /> },
-  "캔": { icon: <MaterialCommunityIcons name="bottle-soda-classic-outline" size={30} color="#b8c1cd" /> },
-  "버섯": {icon: <MaterialCommunityIcons name="mushroom-outline" size={30} color="#bb7862" />},
-  "채소": {icon: <Ionicons name="leaf" size={30} color="#69c56d" /> },
-  "육류": {icon: <MaterialCommunityIcons name="food-drumstick" size={30} color="#e17a46" /> },
-  "양념": {icon: <MaterialCommunityIcons name="shaker-outline" size={30} color="#d6b75b" /> },
-  "소스": {icon: <MaterialCommunityIcons name="bottle-tonic-outline" size={30} color="#ee8b6c" /> },
-  "육수": { icon: <MaterialCommunityIcons name="pot-steam" size={30} color="#e6a469" /> },
-  "유제품": {icon: <MaterialCommunityIcons name="glass-mug-variant" size={30} color="#f5e1a4" />},
-  "기타": { icon: <Ionicons name="apps-outline" size={30} color="#4eb0d4" /> },
-  "면": { icon: <MaterialCommunityIcons name="noodles" size={30} color="#dfc264" /> },
-
-  // 필요시 기타 카테고리 추가...
+  // 가공/반찬
+  "조미김/김치류": { icon: <MaterialCommunityIcons name="food-variant" size={30} color="#90d8b8" /> },
+  "떡/빵/기타가공식품": { icon: <MaterialCommunityIcons name="bread-slice" size={30} color="#f2cfa7" /> },
+  "분말/가루류": { icon: <MaterialCommunityIcons name="sack" size={30} color="#d8bf7b" /> },
+  // 양념류(세분화)
+  "기본양념": { icon: <MaterialCommunityIcons name="shaker-outline" size={30} color="#e8b848" /> },
+  "장류": { icon: <MaterialCommunityIcons name="flask-outline" size={30} color="#b67063" /> },
+  "분말/가루양념": { icon: <MaterialCommunityIcons name="chili-mild" size={30} color="#f0533e" /> },
+  "액체양념": { icon: <MaterialCommunityIcons name="bottle-soda-classic-outline" size={30} color="#f1c232" /> },
+  "복합/즉석양념": { icon: <MaterialCommunityIcons name="food-croissant" size={30} color="#d1b48c" /> },
+  "기타/조미료": { icon: <MaterialCommunityIcons name="star-outline" size={30} color="#7d73c1" /> },
+  // 소스류/음료/오일/캔/기타
+  "소스류": { icon: <MaterialCommunityIcons name="bottle-tonic-outline" size={30} color="#ee8b6c" /> },
+  "음료/주류/조미료": { icon: <MaterialCommunityIcons name="glass-mug-variant" size={30} color="#c6e3f9" /> },
+  "오일/기름": { icon: <MaterialCommunityIcons name="oil" size={30} color="#ffdb6a" /> },
+  "캔": { icon: <MaterialCommunityIcons name="cup-water" size={30} color="#b8c1cd" /> },
+  "육수": { icon: <MaterialCommunityIcons name="cup" size={30} color="#bbb" /> }
 };
+
 
 import categorizedRaw from "../../DB/db_cleaner/categorized_ingredients.json";
 const categorized = categorizedRaw as {
@@ -141,17 +160,22 @@ export default function MainScreen() {
             ) : !selectedIngredient ? (
               <>
                 <Text style={styles.modalTitle}>{selectedCategory} 재료 선택</Text>
-                <ScrollView contentContainerStyle={{ flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}>
-                  {ingredientsMap[selectedCategory].map(({ name, unit }) => (
+                <FlatList
+                  data={ingredientsMap[selectedCategory]}
+                  keyExtractor={(item) => item.name}
+                  numColumns={2}  // 👈 2열로
+                  contentContainerStyle={styles.ingGridWrap}
+                  renderItem={({ item }) => (
                     <TouchableOpacity
-                      key={name}
-                      style={styles.ingBtn}
-                      onPress={() => setSelectedIngredient({ name, unit })}
+                      style={styles.ingBlock}
+                      onPress={() => setSelectedIngredient(item)}
                     >
-                      <Text style={styles.ingBtnText}>{name}</Text>
+          {/* 예시: 가루류면 flour, 채소면 carrot, 고기면 steak 등 랜덤/공통아이콘! */}
+                      <MaterialCommunityIcons name="food-apple" size={22} color="#bbb" />
+                      <Text style={styles.ingBtnText}>{item.name}</Text>
                     </TouchableOpacity>
-                  ))}
-                </ScrollView>
+                  )}
+                />
                 <TouchableOpacity style={styles.backBtn} onPress={() => setSelectedCategory(null)}>
                   <Text style={{ color: "#888" }}>← 카테고리 선택으로</Text>
                 </TouchableOpacity>
@@ -227,6 +251,7 @@ const styles = StyleSheet.create({
   },
   modalWrap: {
     ...StyleSheet.absoluteFillObject,
+    flex: 1,
     backgroundColor: "rgba(0,0,0,0.15)",
     alignItems: "center",
     justifyContent: "center",
@@ -235,15 +260,20 @@ const styles = StyleSheet.create({
   modalBox: {
     backgroundColor: "#fff",
     borderRadius: 18,
-    padding: 20,
+    padding: 0,
     width: 310,
     elevation: 6,
+    height: 650,
+    paddingHorizontal: 24,
+    overflow: "hidden",
+
   },
   modalTitle: {
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 14,
     textAlign: "center",
+    marginTop: 16,
   },
 
   // 👇 카테고리 블럭 그리드 + 아이콘 스타일
@@ -260,7 +290,7 @@ const styles = StyleSheet.create({
   catBlock: {
     width: "47%",
     margin: "1.5%",
-    height: 80,
+    height: 110,
     backgroundColor: "#f4f4f8",
     borderRadius: 16,
     alignItems: "center",
@@ -270,16 +300,34 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.04,
     shadowRadius: 4,
-    // 아이콘+텍스트 위아래 중앙정렬
     flexDirection: "column",
+    paddingVertical: 12,
   },
   catBtnText: {
     fontSize: 18,
     fontWeight: "600",
     color: "#555",
+    textAlign: "center",
     marginTop: 4,
+    width: "100%",
   },
-
+  // 재료 선택 창
+  ingGridWrap: {
+    paddingBottom: 6,
+    paddingHorizontal: 4,
+  },
+  ingBlock: {
+    width: "47%",
+    margin: "1.5%",
+    height: 110,
+    backgroundColor: "#f0f6fc",
+    borderRadius: 12,
+    alignItems: "center",
+    justifyContent: "center",
+    elevation: 1,
+    flexDirection: "column",
+    paddingVertical: 12,
+  },
   // 👆 여기까지 카테고리 그리드+아이콘 스타일
 
   ingBtn: {
@@ -291,7 +339,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#d1e1fa",
   },
-  ingBtnText: { fontSize: 15, color: "#337" },
+  ingBtnText: { fontSize: 18, color: "#337" },
   input: {
     borderWidth: 1,
     borderColor: "#eee",
@@ -309,5 +357,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 10,
   },
-  backBtn: { marginTop: 8, alignSelf: "center" },
+  backBtn: { marginTop: 8, marginBottom: 18, alignSelf: "center" },
 });
