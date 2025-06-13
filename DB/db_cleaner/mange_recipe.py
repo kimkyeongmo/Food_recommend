@@ -1,3 +1,5 @@
+### 만개의 레시피에서 레시피 크롤링하는 함수 ###
+
 import requests, json
 import os
 from bs4 import BeautifulSoup
