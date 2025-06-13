@@ -6,30 +6,62 @@
     "ingredients": [
       {
         "category": "육수",
-        "name": ["멸치다시마육수"," 쌀뜬물", "물"],
+        "name": ["멸치다시마육수","쌀뜬물", "물"],
         "amount": [600, 600, 600],
         "unit": ["ml", "ml", "ml"],
         "is_required": [false, false, true],
         "priority": [1, 1, 2]
       },
       {
-        "category": "양념",
-        "name": ["김치국물", "깍두기국물", "국간장", "설탕", "고추장", "된장"],
-        "amount": [10, 10, 13, 5, 5, 5],
-        "unit": ["ml", "ml", "ml", "g", "g", "g"],
-        "is_required": [false, false, true, false, false, false],
-        "priority": [2, 2, 1, 1, 1, 1]
-      },
-      {
-        "category": "채소",
-        "name": ["김치", "대파", "청양고추", "마늘"],
-        "amount": [0.5, 20, 1, 3],
-        "unit": ["포기", "g", "개", "개"],
-        "is_required": [true, false, false, true],
+        "category": "기본양념",
+        "name": ["국간장", "설탕", "고추장", "된장"],
+        "amount": [13, 5, 5, 5],
+        "unit": ["ml", "g", "g", "g"],
+        "is_required": [true, false, false, false],
         "priority": [1, 1, 1, 1]
       },
       {
-        "category": "기타",
+        "category": "장류",
+        "name": ["고추장", "된장"],
+        "amount": [5, 5],
+        "unit": ["g", "g"],
+        "is_required": [false, false],
+        "priority": [1, 1]
+      },
+      {
+        "category": "조미김/김치류",
+        "name": ["김치국물", "깍두기국물", "김치"],
+        "amount": [10, 10, 0.5],
+        "unit": ["ml", "ml", "포기"],
+        "is_required": [false, false, true],
+        "priority": [2, 2, 1]
+      },
+      {
+        "category": "잎줄기채소",
+        "name": ["대파"],
+        "amount": [20, 1, 3],
+        "unit": ["g"],
+        "is_required": [false],
+        "priority": [1]
+      },
+      {
+        "category": "열매채소/과채류",
+        "name": ["청양고추"],
+        "amount": [1],
+        "unit": ["개"],
+        "is_required": [false],
+        "priority": [1]
+      },
+      {
+        "category": "뿌리채소",
+        "name": ["마늘"],
+        "amount": [3],
+        "unit": ["개"],
+        "is_required": [true],
+        "priority": [1]
+      },
+      {
+        "category": "두부/콩/콩가공품",
         "name": "두부",
         "amount": 0.5,
         "unit": "모",
@@ -37,7 +69,7 @@
         "priority": 1
       },
       {
-        "category": "가루",
+        "category": "분말/가루양념",
         "name": "고춧가루",
         "amount": 20,
         "unit": "g",
@@ -45,7 +77,7 @@
         "priority": 1
       },
       {
-        "category": "돼지고기",
+        "category": "육류-돼지",
         "name": ["돼지고기목살","돼지고기안심", "돼지고기앞다리살", "돼지고기뒷다리살", "돼지고기등심"],
         "amount": [200, 200, 200, 200, 200],
         "unit": ["g", "g", "g", "g", "g"],
@@ -62,7 +94,1260 @@
       }
     ]
   },
-
+  {
+    "recipe_name": "된장찌개",
+    "recipe_text": "1. 냄비에 물 또는 육수를 붓고 된장, 고춧가루, 다진마늘, 진간장을 넣고 끓인다.\n2. 끓는 동안 감자, 애호박, 양파, 대파, 청양고추, 버섯, 두부 등 채소를 적당히 손질하여 준비한다.\n3. 된장 국물이 끓기 시작하면 손질한 채소들을 넣고 다시 끓인다.\n4. 채소가 익으면 두부를 넣고 한소끔 더 끓인다.\n5. 간을 보고 부족한 경우 소금 등으로 맞춘다.\n6. 마지막으로 대파와 청양고추를 넣고 불을 끄면 완성.",
+    "ingredients": [
+      {
+        "category": "육수",
+        "name": ["멸치다시마육수", "물"],
+        "amount": [500, 500],
+        "unit": ["ml", "ml"],
+        "is_required": [false, true],
+        "priority": [1, 2]
+      },
+      {
+        "category": "장류",
+        "name": ["된장", "쌈장"],
+        "amount": [10, 10],
+        "unit": ["g", "g"],
+        "is_required": [true, false],
+        "priority": [1, 2]
+      },
+      {
+        "category": "기본양념",
+        "name": ["진간장", "소금"],
+        "amount": [5, 1],
+        "unit": ["ml", "g"],
+        "is_required": [true, false],
+        "priority": [1, 2]
+      },
+      {
+        "category": "분말/가루양념",
+        "name": "고춧가루",
+        "amount": 5,
+        "unit": "g",
+        "is_required": false,
+        "priority": 2
+      },
+      {
+        "category": "뿌리채소",
+        "name": ["감자","마늘"],
+        "amount": [2,4],
+        "unit": ["개","개"],
+        "is_required": [false, true],
+        "priority": [2, 2]
+      },
+      {
+        "category": "열매채소/과채류",
+        "name": ["애호박", "청양고추"],
+        "amount": [50, 1],
+        "unit": ["g", "개"],
+        "is_required": [true, false],
+        "priority": [1, 2]
+      },
+      {
+        "category": "뿌리채소",
+        "name": "양파",
+        "amount": 0.5,
+        "unit": "개",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+        "category": "잎줄기채소",
+        "name": "대파",
+        "amount": 20,
+        "unit": "g",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+        "category": "두부/콩/콩가공품",
+        "name": "두부",
+        "amount": 0.5,
+        "unit": "모",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+        "category": "버섯류",
+        "name": "느타리버섯",
+        "amount": 30,
+        "unit": "g",
+        "is_required": false,
+        "priority": 2
+      }
+    ]
+  },
+  {
+  "recipe_name": "부대찌개",
+  "recipe_text": "1. 햄, 소시지, 김치, 양파, 대파, 고추, 두부 등 재료를 먹기 좋은 크기로 썬다.\n2. 냄비에 햄, 소시지, 김치, 떡, 버섯, 대파, 고추 등을 적절히 배치한다.\n3. 양념장(고춧가루, 간장, 된장, 마늘, 설탕, 국간장 등)을 만들어 위에 올린다.\n4. 육수(사골곰탕 또는 물)를 붓고 끓인다.\n5. 라면사리, 치즈, 당면 등을 기호에 따라 넣는다.\n6. 모든 재료가 익을 때까지 끓인 후 완성한다.",
+  "ingredients": [
+    {
+      "category": "햄/가공육",
+      "name": ["스팸", "비엔나소세지", "햄"],
+      "amount": [1, 100, 100],
+      "unit": ["캔", "g", "g"],
+      "is_required": [true, true, false],
+      "priority": [1, 1, 2]
+    },
+    {
+      "category": "조미김/김치류",
+      "name": "김치",
+      "amount": 0.5,
+      "unit": "포기",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "두부/콩/콩가공품",
+      "name": "두부",
+      "amount": 0.5,
+      "unit": "모",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 20,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "열매채소/과채류",
+      "name": ["청양고추", "홍고추"],
+      "amount": [1, 1],
+      "unit": ["개", "개"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "마늘"],
+      "amount": [1, 3],
+      "unit": ["개", "개"],
+      "is_required": [true, true],
+      "priority": [1, 1]
+    },
+    {
+      "category": "떡/빵/기타가공식품",
+      "name": "떡",
+      "amount": 100,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "버섯류",
+      "name": "팽이버섯",
+      "amount": 50,
+      "unit": "g",
+      "is_required": false,
+      "priority": 3
+    },
+    {
+      "category": "면류",
+      "name": "라면사리",
+      "amount": 100,
+      "unit": "g",
+      "is_required": false,
+      "priority": 3
+    },
+    {
+      "category": "유제품",
+      "name": ["슬라이스치즈", "체다치즈"],
+      "amount": [1, 1],
+      "unit": ["g", "g"],
+      "is_required": [false, false],
+      "priority": [2, 3]
+    },
+    {
+      "category": "육수",
+      "name": ["사골곰탕", "물"],
+      "amount": [500, 500],
+      "unit": ["g", "ml"],
+      "is_required": [false, true],
+      "priority": [1, 2]
+    },
+    {
+      "category": "기본양념",
+      "name": ["국간장", "간장", "설탕"],
+      "amount": [10, 10, 5],
+      "unit": ["ml", "ml", "g"],
+      "is_required": [true, false, false],
+      "priority": [1, 2, 3]
+    },
+    {
+      "category": "분말/가루양념",
+      "name": ["고춧가루", "후추"],
+      "amount": [10, 1],
+      "unit": ["g", "g"],
+      "is_required": [true, false],
+      "priority": [1, 3]
+    },
+    {
+      "category": "기타/조미료",
+      "name": "다시다",
+      "amount": 5,
+      "unit": "g",
+      "is_required": false,
+      "priority": 3
+    },
+    {
+      "category": "장류",
+      "name": "된장",
+      "amount": 5,
+      "unit": "g",
+      "is_required": false,
+      "priority": 3
+    }
+  ]
+},
+{
+  "recipe_name": "순두부찌개",
+  "recipe_text": "1. 냄비에 식용유를 두르고 주재료(돼지고기, 바지락, 고추참치 중 택1)와 마늘을 넣고 볶는다.\n2. 고기가 익으면 고춧가루를 넣고 더 볶다가 물이나 멸치육수를 붓는다.\n3. 양파, 대파, 청양고추 등 채소를 넣고 끓인다.\n4. 끓기 시작하면 순두부를 숟가락으로 떠 넣고 국간장으로 간을 한다.\n5. 기호에 따라 계란을 추가하고 한소끔 끓인 후 불을 끈다.",
+  "ingredients": [
+    {
+      "category": "육류-돼지",
+      "name": "돼지고기다짐육",
+      "amount": 100,
+      "unit": "g",
+      "is_required": false,
+      "priority": 1
+    },
+    {
+      "category": "해산물",
+      "name": "바지락",
+      "amount": 100,
+      "unit": "g",
+      "is_required": false,
+      "priority": 1
+    },
+    {
+      "category": "캔",
+      "name": "고추참치",
+      "amount": 1,
+      "unit": "캔",
+      "is_required": false,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["마늘", "양파"],
+      "amount": [2, 0.5],
+      "unit": ["개", "개"],
+      "is_required": [true, true],
+      "priority": [1, 1]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 20,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "열매채소/과채류",
+      "name": "청양고추",
+      "amount": 1,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "두부/콩/콩가공품",
+      "name": "순두부",
+      "amount": 350,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육수",
+      "name": ["멸치다시마육수", "물"],
+      "amount": [500, 500],
+      "unit": ["ml", "ml"],
+      "is_required": [false, true],
+      "priority": [1, 2]
+    },
+    {
+      "category": "분말/가루양념",
+      "name": "고춧가루",
+      "amount": 10,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "기본양념",
+      "name": "국간장",
+      "amount": 10,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 1,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "오일/기름",
+      "name": "식용유",
+      "amount": 5,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "미역국",
+  "recipe_text": "1. 미역을 찬물에 불려서 먹기 좋은 크기로 자른다.\n2. 냄비에 참기름을 두르고 소고기와 마늘을 넣어 볶는다.\n3. 고기가 어느 정도 익으면 불린 미역을 넣고 함께 볶는다.\n4. 물 또는 멸치다시마육수를 붓고 끓인다.\n5. 국간장이나 소금으로 간을 맞추고 중불에서 10~20분 끓여 마무리한다.",
+  "ingredients": [
+    {
+      "category": "건어물",
+      "name": "미역",
+      "amount": 10,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육류-소",
+      "name": ["국거리 소고기","샤브샤브용 소고기", "차돌박이"],
+      "amount": [100, 100, 100],
+      "unit": ["g","g", "g"],
+      "is_required": [false, false, false],
+      "priority": [1, 2, 2]
+    },
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육수",
+      "name": ["물", "멸치다시마육수"],
+      "amount": [800, 800],
+      "unit": ["ml", "ml"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "기본양념",
+      "name": ["국간장", "소금"],
+      "amount": [10, 3],
+      "unit": ["ml", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "액체양념",
+      "name": "참기름",
+      "amount": 5,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "북엇국",
+  "recipe_text": "1. 북어를 물에 살짝 불려서 물기를 제거한 뒤 적당한 크기로 자른다.\n2. 냄비에 참기름을 두르고 북어와 다진마늘을 볶는다.\n3. 물을 붓고 끓이면서 거품을 걷어낸다.\n4. 국간장으로 간을 하고, 대파를 넣는다. (옵션) 콩나물, 두부이 있으면 같이 넣는다.\n5. 끓는 물에 계란을 풀어 넣고 한소끔 끓이면 완성.",
+  "ingredients": [
+    {
+      "category": "건어물",
+      "name": ["북어","황태채"],
+      "amount": [30,30],
+      "unit": ["g","g"],
+      "is_required": [true, false],
+      "priority": [1, 1]
+    },
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 20,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육수",
+      "name": "물",
+      "amount": 800,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "두부/콩/콩가공품",
+      "name": ["콩나물","두부"],
+      "amount": [200,0.5],
+      "unit": ["g","모"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "기본양념",
+      "name": "국간장",
+      "amount": 10,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "액체양념",
+      "name": "참기름",
+      "amount": 5,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 1,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "육개장",
+  "recipe_text": "1. 소고기(부채살, 양지, 사태 등)를 끓는 물에 데쳐 불순물을 제거하고 건져낸다.\n2. 냄비에 참기름을 두르고 고기를 볶다가 고춧가루를 넣고 타지 않게 볶는다.\n3. 물 또는 멸치다시마육수를 붓고 끓인다.\n4. 손질한 대파, 숙주, 고사리, 토란대, 무청 등을 넣고 끓인다.\n5. 국간장, 소금, 후추로 간을 하고, 기호에 따라 계란이나 당면을 추가한다.",
+  "ingredients": [
+    {
+      "category": "육류-소",
+      "name": ["부채살", "사태", "차돌박이"],
+      "amount": [100, 100, 100],
+      "unit": ["g", "g", "g"],
+      "is_required": [false, false, false],
+      "priority": [2, 1, 2]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": ["대파", "숙주", "고사리", "토란대", "무청"],
+      "amount": [100, 100, 50, 50, 30],
+      "unit": ["g", "g", "g", "g", "g"],
+      "is_required": [true, false, false, false, false],
+      "priority": [1, 2, 2, 2, 2]
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["마늘", "양파"],
+      "amount": [3, 0.5],
+      "unit": ["개", "개"],
+      "is_required": [true, true],
+      "priority": [1, 2]
+    },
+    {
+      "category": "육수",
+      "name": ["물", "멸치다시마육수"],
+      "amount": [1000, 1000],
+      "unit": ["ml", "ml"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "기본양념",
+      "name": ["국간장", "소금", "후추"],
+      "amount": [15, 3, 1],
+      "unit": ["ml", "g", "g"],
+      "is_required": [true, false, false],
+      "priority": [1, 2, 2]
+    },
+    {
+      "category": "분말/가루양념",
+      "name": "고춧가루",
+      "amount": 15,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "액체양념",
+      "name": ["참기름", "들기름"],
+      "amount": [10, 5],
+      "unit": ["ml", "ml"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 1,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "면류",
+      "name": "당면",
+      "amount": 30,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "콩나물국",
+  "recipe_text": "1. 콩나물을 흐르는 물에 깨끗이 씻는다.\n2. 냄비에 물 또는 멸치다시마육수를 넣고 끓인다.\n3. 육수가 끓으면 콩나물, 마늘, 대파, 고추를 넣는다.\n4. 국간장이나 소금으로 간을 맞추고 5~10분 정도 더 끓인다.\n5. 마지막에 계란을 풀어 넣고 살짝 저어 마무리한다.",
+  "ingredients": [
+    {
+      "category": "두부/콩/콩가공품",
+      "name": "콩나물",
+      "amount": 200,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육수",
+      "name": ["물", "멸치다시마육수"],
+      "amount": [1000, 1000],
+      "unit": ["ml", "ml"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 30,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "열매채소/과채류",
+      "name": ["청양고추", "풋고추"],
+      "amount": [1, 1],
+      "unit": ["개", "개"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "기본양념",
+      "name": ["국간장", "소금"],
+      "amount": [10, 2],
+      "unit": ["ml", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 1,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "소고기무국",
+  "recipe_text": "1. 무는 나박하게 썰고, 소고기는 먹기 좋은 크기로 썬다.\n2. 냄비에 참기름을 두르고 소고기를 볶는다.\n3. 고기가 어느 정도 익으면 무를 넣고 함께 볶는다.\n4. 물 또는 멸치다시마육수를 붓고 끓인다.\n5. 국간장, 다진 마늘, 대파로 간을 맞추고 무가 부드러워질 때까지 끓인다.\n6. 기호에 따라 소금과 후추로 마무리 간을 조절한다.",
+  "ingredients": [
+    {
+      "category": "육류-소",
+      "name": ["부채살", "차돌박이", "사태"],
+      "amount": [100, 100, 100],
+      "unit": ["g", "g", "g"],
+      "is_required": [true, false, false],
+      "priority": [1, 2, 2]
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["무", "마늘"],
+      "amount": [200, 2],
+      "unit": ["g", "개"],
+      "is_required": [true, true],
+      "priority": [1, 1]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 30,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육수",
+      "name": ["물", "멸치다시마육수"],
+      "amount": [1000, 1000],
+      "unit": ["ml", "ml"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "기본양념",
+      "name": ["국간장", "소금", "후추"],
+      "amount": [15, 2, 1],
+      "unit": ["ml", "g", "g"],
+      "is_required": [true, false, false],
+      "priority": [1, 2, 2]
+    },
+    {
+      "category": "액체양념",
+      "name": "참기름",
+      "amount": 5,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "만두전골",
+  "recipe_text": "1. 감자는 납작하게 썰고, 양파, 대파, 배추잎 등 야채를 손질한다.\n2. 전골냄비에 육수를 붓고 끓인다.\n3. 육수가 끓으면 만두, 손질한 채소, 버섯, 고기류를 순서대로 넣는다.\n4. 국간장, 다진 마늘로 간을 맞추고 고추와 후추로 마무리한다.\n5. 모든 재료가 익을 때까지 끓인 후 불을 줄여서 먹는다.",
+  "ingredients": [
+    {
+      "category": "떡/빵/기타가공식품",
+      "name": "만두",
+      "amount": 250,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육수",
+      "name": ["멸치다시마육수", "물"],
+      "amount": [1000, 1000],
+      "unit": ["ml", "ml"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["감자", "양파", "마늘"],
+      "amount": [1, 0.5, 2],
+      "unit": ["개", "개", "개"],
+      "is_required": [true, true, true],
+      "priority": [1, 1, 1]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": ["배추잎", "대파"],
+      "amount": [50, 30],
+      "unit": ["g", "g"],
+      "is_required": [true, true],
+      "priority": [1, 1]
+    },
+    {
+      "category": "버섯류",
+      "name": ["느타리버섯", "팽이버섯"],
+      "amount": [50, 50],
+      "unit": ["g", "g"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "육류-소",
+      "name": ["샤브샤브용 소고기", "차돌박이"],
+      "amount": [100, 100],
+      "unit": ["g", "g"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "기본양념",
+      "name": ["국간장", "후추"],
+      "amount": [15, 1],
+      "unit": ["ml", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    }
+  ]
+},
+{
+  "recipe_name": "버섯전골",
+  "recipe_text": "1. 버섯은 밑동을 잘라내고 손으로 찢거나 먹기 좋게 자른다.\n2. 감자, 양파, 대파, 청양고추 등 야채를 손질한다.\n3. 냄비에 육수를 붓고 끓이다가 준비한 재료들을 넣는다.\n4. 간장, 마늘, 소금, 후추 등으로 간을 맞추고 중불에서 끓인다.\n5. 모든 재료가 익으면 불을 줄이고 바로 먹는다.",
+  "ingredients": [
+    {
+      "category": "버섯류",
+      "name": ["느타리버섯", "팽이버섯", "새송이버섯", "표고버섯"],
+      "amount": [50, 50, 50, 50],
+      "unit": ["g", "g", "g", "g"],
+      "is_required": [true, true, false, false],
+      "priority": [1, 1, 2, 2]
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["감자", "양파", "마늘"],
+      "amount": [1, 0.5, 2],
+      "unit": ["개", "개", "개"],
+      "is_required": [true, true, true],
+      "priority": [1, 1, 1]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 30,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "열매채소/과채류",
+      "name": "청양고추",
+      "amount": 1,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "육수",
+      "name": ["멸치다시마육수", "물"],
+      "amount": [1000, 1000],
+      "unit": ["ml", "ml"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "육류-소",
+      "name": ["샤브샤브용 소고기", "차돌박이"],
+      "amount": [100, 100],
+      "unit": ["g", "g"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "기본양념",
+      "name": ["국간장", "소금", "후추"],
+      "amount": [15, 2, 1],
+      "unit": ["ml", "g", "g"],
+      "is_required": [true, false, false],
+      "priority": [1, 2, 2]
+    }
+  ]
+},
+{
+  "recipe_name": "카레",
+  "recipe_text": "1. 감자, 당근, 양파를 먹기 좋게 썬다.\n2. 식용유를 두른 팬에 고기 또는 채소를 볶는다.\n3. 재료가 반쯤 익으면 물을 붓고 끓인다.\n4. 재료가 익으면 카레가루를 넣고 잘 풀어준다.\n5. 마지막에 소금, 후추로 간을 맞춰 완성한다.",
+  "ingredients": [
+    {
+      "category": "뿌리채소",
+      "name": ["감자", "당근", "양파", "마늘"],
+      "amount": [1, 50, 0.5, 2],
+      "unit": ["개", "g", "개", "개"],
+      "is_required": [false, false, true, true],
+      "priority": [1, 1, 1, 1]
+    },
+    {
+      "category": "육류-소",
+      "name": ["사태", "부채살", "차돌박이"],
+      "amount": [150, 150, 150],
+      "unit": ["g", "g", "g"],
+      "is_required": [false, false, false],
+      "priority": [2, 2, 2]
+    },
+    {
+      "category": "육류-돼지",
+      "name": ["돼지고기목살", "돼지고기다짐육"],
+      "amount": [150, 150],
+      "unit": ["g", "g"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "육류-닭",
+      "name": "닭가슴살",
+      "amount": 150,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "분말/가루류",
+      "name": "카레가루",
+      "amount": 100,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육수",
+      "name": "물",
+      "amount": 500,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "기본양념",
+      "name": ["소금", "후추"],
+      "amount": [2, 1],
+      "unit": ["g", "g"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "오일/기름",
+      "name": "식용유",
+      "amount": 10,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "삼계탕",
+  "recipe_text": "1. 삼계탕용 닭을 깨끗이 씻는다.\n2. 닭 속에 불린 찹쌀, 마늘, 대추를 넣는다.\n3. 냄비에 닭을 넣고 물을 붓는다.\n4. 대파와 생강을 함께 넣고 중불에서 끓인다.\n5. 거품을 걷어내고 약불에서 1시간 이상 푹 끓인다.\n6. 소금,후추로 간을 맞춰 마무리한다.\n7. (선택) 치킨스톡을 추가하면 풍미가 더욱 깊어진다.",
+  "ingredients": [
+    {
+      "category": "육류-닭",
+      "name": "삼계탕용 닭",
+      "amount": 1,
+      "unit": "마리",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "곡류/잡곡",
+      "name": "불린 찹쌀",
+      "amount": 100,
+      "unit": "g",
+      "is_required": false,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["마늘", "생강"],
+      "amount": [5, 10],
+      "unit": ["개", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 30,
+      "unit": "g",
+      "is_required": false,
+      "priority": 1
+    },
+    {
+      "category": "과일류",
+      "name": ["밤", "대추"],
+      "amount": [3, 2],
+      "unit": ["개", "개"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "육수",
+      "name": "물",
+      "amount": 1000,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "기본양념",
+      "name": ["소금","후추"],
+      "amount": [2,2],
+      "unit": ["g","g"],
+      "is_required": [true,true],
+      "priority": [1, 1]
+    },
+    {
+      "category": "소스류",
+      "name": "치킨스톡",
+      "amount": 1,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "돼지고기김치찜",
+  "recipe_text": "1. 김치는 적당한 크기로 자르고 양파, 마늘을 썬다.\n2. 냄비에 돼지고기를 넣고 익힌다.\n3. 마늘, 양파, 김치를 넣고 함께 볶다가 물을 붓고 고춧가루, 고추장, 설탕을 넣는다.\n4. 중약불에서 30~40분 푹 졸인다.\n5. 기호에 따라 소금으로 간을 맞춘다.",
+  "ingredients": [
+    {
+      "category": "육류-돼지",
+      "name": ["돼지고기목살", "돼지고기앞다리살", "돼지고기뒷다리살"],
+      "amount": [300, 300, 300],
+      "unit": ["g", "g", "g"],
+      "is_required": [false, false, false],
+      "priority": [1, 1, 1]
+    },
+    {
+      "category": "조미김/김치류",
+      "name": "김치",
+      "amount": 0.5,
+      "unit": "포기",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "마늘"],
+      "amount": [0.5, 3],
+      "unit": ["개", "개"],
+      "is_required": [true, true],
+      "priority": [1, 1]
+    },
+    {
+      "category": "분말/가루양념",
+      "name": "고춧가루",
+      "amount": 15,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "장류",
+      "name": "고추장",
+      "amount": 10,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "기본양념",
+      "name": ["설탕", "소금"],
+      "amount": [5, 2],
+      "unit": ["g", "g"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "육수",
+      "name": "물",
+      "amount": 300,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "비지찌개",
+  "recipe_text": "1. 냄비에 식용유를 두르고 마늘, 대파, 돼지고기를 볶는다.\n2. 고기가 익으면 김치와 고춧가루, 고추장을 넣고 함께 볶는다.\n3. 비지를 넣고 물을 부어 중불에서 끓인다.\n4. 끓기 시작하면 약불로 줄여 15~20분 더 끓인다.\n5. 소금이나 국간장으로 간을 맞춘다.",
+  "ingredients": [
+    {
+      "category": "두부/콩/콩가공품",
+      "name": "비지",
+      "amount": 200,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육류-돼지",
+      "name": ["돼지고기다짐육", "돼지고기앞다리살", "돼지고기뒷다리살"],
+      "amount": [150, 150, 150],
+      "unit": ["g", "g", "g"],
+      "is_required": [true, false, false],
+      "priority": [1, 2, 2]
+    },
+    {
+      "category": "조미김/김치류",
+      "name": "김치",
+      "amount": 0.3,
+      "unit": "포기",
+      "is_required": false,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 3,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 30,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "분말/가루양념",
+      "name": "고춧가루",
+      "amount": 10,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "장류",
+      "name": "고추장",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "기본양념",
+      "name": ["소금", "국간장"],
+      "amount": [2, 10],
+      "unit": ["g", "ml"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "오일/기름",
+      "name": "식용유",
+      "amount": 10,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육수",
+      "name": "물",
+      "amount": 400,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 1,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "계란국",
+  "recipe_text": "1. 물을 끓이고 국간장, 다진마늘, 대파를 넣는다.\n2. 끓기 시작하면 계란을 잘 풀어 천천히 부어준다.\n3. 소금이나 국간장으로 간을 맞추고 불을 끈다.",
+  "ingredients": [
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 20,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "기본양념",
+      "name": ["국간장", "소금"],
+      "amount": [10, 2],
+      "unit": ["ml", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "육수",
+      "name": "물",
+      "amount": 400,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "돈까스김치나베",
+  "recipe_text": "1. 김치를 먹기 좋게 자르고 양파, 대파 등의 채소를 손질한다.\n2. 냄비에 식용유를 두르고 김치를 볶는다. 필요시 설탕과 고춧가루를 넣는다.\n3. 김치가 어느 정도 볶아지면 물이나 멸치다시마육수를 붓고 끓인다.\n4. 양파, 대파 등을 넣고 끓이다가 두부를 추가한다.\n5. 김치국물이 우러나면 준비된 돈까스를 위에 올려 살짝 더 끓인다.\n6. 완성 후 기호에 따라 참기름이나 깨소금을 뿌려 마무리한다.",
+  "ingredients": [
+    {
+      "category": "햄/가공육",
+      "name": "돈까스",
+      "amount": 1,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "조미김/김치류",
+      "name": "김치",
+      "amount": 0.5,
+      "unit": "포기",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육수",
+      "name": ["물", "멸치다시마육수"],
+      "amount": [400, 400],
+      "unit": ["ml", "ml"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": ["대파"],
+      "amount": [20],
+      "unit": ["g"],
+      "is_required": [true],
+      "priority": [1]
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파"],
+      "amount": [0.5],
+      "unit": ["개"],
+      "is_required": [true],
+      "priority": [1]
+    },
+    {
+      "category": "두부/콩/콩가공품",
+      "name": "두부",
+      "amount": 0.5,
+      "unit": "모",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "분말/가루양념",
+      "name": "고춧가루",
+      "amount": 5,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "기본양념",
+      "name": ["설탕"],
+      "amount": [3],
+      "unit": ["g"],
+      "is_required": [false],
+      "priority": [2]
+    },
+    {
+      "category": "오일/기름",
+      "name": "식용유",
+      "amount": 10,
+      "unit": "ml",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "분말/가루양념",
+      "name": "깨소금",
+      "amount": 3,
+      "unit": "g",
+      "is_required": false,
+      "priority": 3
+    },
+    {
+      "category": "액체양념",
+      "name": "참기름",
+      "amount": 5,
+      "unit": "ml",
+      "is_required": false,
+      "priority": 3
+    }
+  ]
+},
+{
+  "recipe_name": "감자탕",
+  "recipe_text": "1. 돼지등뼈는 찬물에 담가 핏물을 뺀 뒤 데쳐낸다.\n2. 냄비에 데친 등뼈, 물 또는 사골곰탕을 넣고 끓인다.\n3. 된장, 고춧가루, 국간장, 마늘 등 양념을 넣고 중불에서 푹 끓인다.\n4. 감자, 양파, 대파, 들깨가루를 넣고 끓인다.\n5. 우거지나 시래기 등의 채소를 넣고 끓이다가 마무리로 깻잎을 올려준다.",
+  "ingredients": [
+    {
+      "category": "육류-돼지",
+      "name": "돼지고기등뼈",
+      "amount": 800,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육수",
+      "name": ["물", "사골곰탕"],
+      "amount": [1000, 1000],
+      "unit": ["ml", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["감자", "마늘", "양파"],
+      "amount": [2, 3, 0.5],
+      "unit": ["개", "개", "개"],
+      "is_required": [true, true, true],
+      "priority": [1, 1, 1]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": ["대파", "우거지", "시래기", "깻잎"],
+      "amount": [30, 100, 50, 5],
+      "unit": ["g", "g", "g", "g"],
+      "is_required": [true, false, false, false],
+      "priority": [1, 2, 2, 3]
+    },
+    {
+      "category": "분말/가루양념",
+      "name": ["고춧가루", "들깨가루"],
+      "amount": [10, 15],
+      "unit": ["g", "g"],
+      "is_required": [true, true],
+      "priority": [1, 1]
+    },
+    {
+      "category": "장류",
+      "name": "된장",
+      "amount": 20,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "기본양념",
+      "name": "국간장",
+      "amount": 10,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
   {
     "recipe_name": "꼬막무침",
     "recipe_text": 
@@ -77,36 +1362,52 @@
         "priority": 1
       },
       {
-        "category": "채소",
-        "name": ["마늘", "양파", "대파", "당근", "풋고추"],
-        "amount": [2, 0.2, 1, 50, 1],
-        "unit": ["개", "개", "g", "g", "g"],
-        "is_required": [true, true, true, true, true],
-        "priority": [1, 2, 2, 3, 3]
+        "category": "뿌리채소",
+        "name": ["마늘", "양파", "당근"],
+        "amount": [2, 0.2, 50],
+        "unit": ["개", "개", "g"],
+        "is_required": [true, true, false],
+        "priority": [1, 1, 2]
       },
       {
-        "category": "양념",
-        "name": ["간장", "고춧가루", "다진 마늘"],
-        "amount": [50, 20, 10],
-        "unit": ["ml", "g", "g"],
-        "is_required": [true, true, true],
-        "priority": [1, 1, 1]
-      },
-            {
-        "category": "가루",
-        "name": ["고춧가루"],
-        "amount": [20],
+        "category": "잎줄기채소",
+        "name": ["대파"],
+        "amount": [1],
         "unit": ["g"],
         "is_required": [true],
-        "priority": [1]
+        "priority": [2]
       },
       {
-        "category": "기타",
-        "name": ["설탕", "참기름", "깨소금"],
-        "amount": [5, 5, 5],
-        "unit": ["g", "g", "g"],
-        "is_required": [false, false, false],
-        "priority": [1, 1, 1]
+        "category": "열매채소/과채류",
+        "name": ["풋고추"],
+        "amount": [1],
+        "unit": ["개"],
+        "is_required": [true],
+        "priority": [3]
+      },
+      {
+        "category": "기본양념",
+        "name": ["진간장", "설탕"],
+        "amount": [50, 5],
+        "unit": ["ml", "g"],
+        "is_required": [true, false],
+        "priority": [1, 1]
+      },
+            {
+        "category": "분말/가루양념",
+        "name": ["고춧가루", "깨소금"],
+        "amount": [20, 5],
+        "unit": ["g", "g"],
+        "is_required": [true, false],
+        "priority": [1, 1]
+      },
+      {
+        "category": "액체양념",
+        "name": ["참기름"],
+        "amount": [5],
+        "unit": ["g"],
+        "is_required": [false],
+        "priority": [1]
       }
     ]
   }
