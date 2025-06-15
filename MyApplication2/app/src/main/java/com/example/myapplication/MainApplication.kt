@@ -8,7 +8,6 @@ import com.facebook.react.ReactApplication
 import com.facebook.react.ReactNativeHost
 import com.facebook.react.ReactPackage
 import com.facebook.react.shell.MainReactPackage
-//import com.swmansion.rnscreens.RNScreensPackage 오류 고치기
 
 import com.facebook.soloader.SoLoader
 import java.io.FileOutputStream
@@ -21,7 +20,6 @@ class MainApplication : Application(), ReactApplication {
         override fun getPackages(): List<ReactPackage> {
             return listOf(
                 MainReactPackage(),
-                //오류 고치기RNScreensPackage(),
                 MyPackage(),  // 네이티브 모듈 패키지
             )
         }
@@ -46,7 +44,7 @@ class MainApplication : Application(), ReactApplication {
         }
 
         // ✅ SQLite DB 파일 assets → 내부 저장소 복사
-        copyDatabaseIfNeeded("swRecipe.db")
+        copyDatabaseIfNeeded("swRecipe1.db")
     }
 
     private fun copyDatabaseIfNeeded(dbName: String) {

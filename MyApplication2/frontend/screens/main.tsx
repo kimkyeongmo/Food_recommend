@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { FlatList, KeyboardAvoidingView, Modal, Platform, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { NativeModules, Button, Alert } from "react-native";
 // json import (tsconfig resolveJsonModule: true 필요)
@@ -8,6 +9,45 @@ const categorized = categorizedRaw as {
   [category: string]: { [name: string]: string };
 };
 
+// export const CATEGORY_ICON: { [key: string]: { icon: React.ReactNode } } = {
+//   // 채소/곡류
+//   "뿌리채소": { icon: <MaterialCommunityIcons name="carrot" size={30} color="#ff9e42" /> },
+//   "잎줄기채소": { icon: <MaterialCommunityIcons name="leaf" size={30} color="#82c67a" /> },
+//   "열매채소/과채류": { icon: <MaterialCommunityIcons name="food-apple" size={30} color="#f47171" /> },
+//   "버섯류": { icon: <MaterialCommunityIcons name="mushroom" size={30} color="#bb7862" /> },
+//   "건어물": { icon: <MaterialCommunityIcons name="fish" size={30} color="#4fb5c4" /> },
+//   "곡류/잡곡": { icon: <MaterialCommunityIcons name="rice" size={30} color="#e6be7a" /> },
+//   "면류": { icon: <MaterialCommunityIcons name="noodles" size={30} color="#dfc264" /> },
+//   "두부/콩/콩가공품": { icon: <MaterialCommunityIcons name="soy-sauce" size={30} color="#dbad74" /> },
+//   "달걀류": { icon: <MaterialCommunityIcons name="egg" size={30} color="#f6db57" /> },
+//   "유제품": { icon: <MaterialCommunityIcons name="cheese" size={30} color="#ffd86e" /> },
+//   "견과/씨앗류": { icon: <MaterialCommunityIcons name="peanut" size={30} color="#c17d4c" /> },
+//   "과일류": { icon: <MaterialCommunityIcons name="fruit-cherries" size={30} color="#e576ae" /> },
+//   // 육류/어패류/햄
+//   "육류-소": { icon: <MaterialCommunityIcons name="cow" size={30} color="#a47551" /> },
+//   "육류-돼지": { icon: <MaterialCommunityIcons name="pig-variant" size={30} color="#f3b2b1" /> },
+//   "육류-닭": { icon: <MaterialCommunityIcons name="food-drumstick" size={30} color="#f7a35c" /> },
+//   "육류-오리": { icon: <MaterialCommunityIcons name="food-turkey" size={28} color="#be946d" /> },
+//   "햄/가공육": { icon: <MaterialCommunityIcons name="sausage" size={28} color="#dc8b7d" /> },
+//   "해산물": { icon: <MaterialCommunityIcons name="fish" size={30} color="#46a0b7" /> },
+//   // 가공/반찬
+//   "조미김/김치류": { icon: <MaterialCommunityIcons name="food-variant" size={30} color="#90d8b8" /> },
+//   "떡/빵/기타가공식품": { icon: <MaterialCommunityIcons name="bread-slice" size={30} color="#f2cfa7" /> },
+//   "분말/가루류": { icon: <MaterialCommunityIcons name="sack" size={30} color="#d8bf7b" /> },
+//   // 양념류(세분화)
+//   "기본양념": { icon: <MaterialCommunityIcons name="shaker-outline" size={30} color="#e8b848" /> },
+//   "장류": { icon: <MaterialCommunityIcons name="flask-outline" size={30} color="#b67063" /> },
+//   "분말/가루양념": { icon: <MaterialCommunityIcons name="chili-mild" size={30} color="#f0533e" /> },
+//   "액체양념": { icon: <MaterialCommunityIcons name="bottle-soda-classic-outline" size={30} color="#f1c232" /> },
+//   "복합/즉석양념": { icon: <MaterialCommunityIcons name="food-croissant" size={30} color="#d1b48c" /> },
+//   "기타/조미료": { icon: <MaterialCommunityIcons name="star-outline" size={30} color="#7d73c1" /> },
+//   // 소스류/음료/오일/캔/기타
+//   "소스류": { icon: <MaterialCommunityIcons name="bottle-tonic-outline" size={30} color="#ee8b6c" /> },
+//   "음료/주류/조미료": { icon: <MaterialCommunityIcons name="glass-mug-variant" size={30} color="#c6e3f9" /> },
+//   "오일/기름": { icon: <MaterialCommunityIcons name="oil" size={30} color="#ffdb6a" /> },
+//   "캔": { icon: <MaterialCommunityIcons name="cup-water" size={30} color="#b8c1cd" /> },
+//   "육수": { icon: <MaterialCommunityIcons name="cup" size={30} color="#bbb" /> }
+// };
 // json에서 카테고리/재료/단위 뽑기
 const categories = Object.keys(categorized);
 const ingredientsMap: { [category: string]: { name: string; unit: string }[] } = {};
