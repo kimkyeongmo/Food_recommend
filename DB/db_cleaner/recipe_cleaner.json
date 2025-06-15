@@ -14,11 +14,11 @@
       },
       {
         "category": "기본양념",
-        "name": ["국간장", "설탕", "고추장", "된장"],
-        "amount": [13, 5, 5, 5],
-        "unit": ["ml", "g", "g", "g"],
-        "is_required": [true, false, false, false],
-        "priority": [1, 1, 1, 1]
+        "name": ["국간장", "설탕"],
+        "amount": [13, 5],
+        "unit": ["ml", "g"],
+        "is_required": [true, false],
+        "priority": [1, 1]
       },
       {
         "category": "장류",
@@ -546,12 +546,20 @@
     },
     {
       "category": "잎줄기채소",
-      "name": ["대파", "숙주", "고사리", "토란대", "무청"],
-      "amount": [100, 100, 50, 50, 30],
-      "unit": ["g", "g", "g", "g", "g"],
-      "is_required": [true, false, false, false, false],
-      "priority": [1, 2, 2, 2, 2]
+      "name": ["대파", "고사리", "토란대", "무청"],
+      "amount": [100, 50, 50, 30],
+      "unit": ["g", "g", "g", "g"],
+      "is_required": [true, false, false, false],
+      "priority": [1, 2, 2, 2]
     },
+    {
+    "category": "두부/콩/콩가공품",
+    "name": ["숙주"],
+    "amount": [100],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
     {
       "category": "뿌리채소",
       "name": ["마늘", "양파"],
@@ -569,13 +577,21 @@
       "priority": [1, 2]
     },
     {
-      "category": "기본양념",
-      "name": ["국간장", "소금", "후추"],
-      "amount": [15, 3, 1],
-      "unit": ["ml", "g", "g"],
-      "is_required": [true, false, false],
-      "priority": [1, 2, 2]
-    },
+    "category": "기본양념",
+    "name": ["국간장", "소금"],
+    "amount": [15, 3],
+    "unit": ["ml", "g"],
+    "is_required": [true, false],
+    "priority": [1, 2]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
     {
       "category": "분말/가루양념",
       "name": "고춧가루",
@@ -709,13 +725,21 @@
       "priority": [1, 2]
     },
     {
-      "category": "기본양념",
-      "name": ["국간장", "소금", "후추"],
-      "amount": [15, 2, 1],
-      "unit": ["ml", "g", "g"],
-      "is_required": [true, false, false],
-      "priority": [1, 2, 2]
-    },
+    "category": "기본양념",
+    "name": ["국간장", "소금"],
+    "amount": [15, 2],
+    "unit": ["ml", "g"],
+    "is_required": [true, false],
+    "priority": [1, 2]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
     {
       "category": "액체양념",
       "name": "참기름",
@@ -779,13 +803,21 @@
       "priority": [2, 2]
     },
     {
-      "category": "기본양념",
-      "name": ["국간장", "후추"],
-      "amount": [15, 1],
-      "unit": ["ml", "g"],
-      "is_required": [true, false],
-      "priority": [1, 2]
-    }
+    "category": "기본양념",
+    "name": ["국간장"],
+    "amount": [15],
+    "unit": ["ml"],
+    "is_required": [true],
+    "priority": [1]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  }
   ]
 },
 {
@@ -841,13 +873,21 @@
       "priority": [2, 2]
     },
     {
-      "category": "기본양념",
-      "name": ["국간장", "소금", "후추"],
-      "amount": [15, 2, 1],
-      "unit": ["ml", "g", "g"],
-      "is_required": [true, false, false],
-      "priority": [1, 2, 2]
-    }
+    "category": "기본양념",
+    "name": ["국간장", "소금"],
+    "amount": [15, 2],
+    "unit": ["ml", "g"],
+    "is_required": [true, false],
+    "priority": [1, 2]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  }
   ]
 },
 {
@@ -903,13 +943,21 @@
       "priority": 1
     },
     {
-      "category": "기본양념",
-      "name": ["소금", "후추"],
-      "amount": [2, 1],
-      "unit": ["g", "g"],
-      "is_required": [false, false],
-      "priority": [2, 2]
-    },
+    "category": "기본양념",
+    "name": ["소금"],
+    "amount": [2],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [2],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
     {
       "category": "오일/기름",
       "name": "식용유",
@@ -973,13 +1021,21 @@
       "priority": 1
     },
     {
-      "category": "기본양념",
-      "name": ["소금","후추"],
-      "amount": [2,2],
-      "unit": ["g","g"],
-      "is_required": [true,true],
-      "priority": [1, 1]
-    },
+    "category": "기본양념",
+    "name": ["소금"],
+    "amount": [2],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [2],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
     {
       "category": "소스류",
       "name": "치킨스톡",
@@ -1348,6 +1404,3441 @@
     }
   ]
 },
+{
+    "recipe_name": "비빔국수",
+"recipe_text": "1. 소면을 삶아 찬물에 헹군다.\n2. 각종 채소는 채썰어 준비한다.\n3. 고추장, 고춧가루, 설탕, 식초, 간장, 다진마늘, 참기름 등으로 양념장을 만든다.\n4. 삶은 소면에 채소와 양념장을 넣고 고루 비벼 완성한다.",
+    "ingredients": [
+      {
+        "category": "면류",
+        "name": "소면",
+        "amount": 200,
+        "unit": "g",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+  "category": "장류",
+  "name": ["고추장"],
+  "amount": [30],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "분말/가루양념",
+  "name": ["고춧가루"],
+  "amount": [10],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "기본양념",
+  "name": ["설탕", "식초", "간장"],
+  "amount": [10, 20, 10],
+  "unit": ["g", "ml", "ml"],
+  "is_required": [true, true, true],
+  "priority": [1, 1, 1]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [10],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+},
+      {
+        "category": "잎줄기채소",
+        "name": "깻잎",
+        "amount": 10,
+        "unit": "g",
+        "is_required": false,
+        "priority": 2
+      },
+      {
+        "category": "뿌리채소",
+        "name": "마늘",
+        "amount": 2,
+        "unit": "개",
+        "is_required": false,
+        "priority": 2
+      }
+    ]
+  },
+  {
+    "recipe_name": "잔치국수",
+"recipe_text": "1. 멸치다시마육수로 국물을 만든다.\n2. 소면을 삶아 찬물에 헹궈둔다.\n3. 애호박, 당근, 버섯, 계란 등 고명을 준비한다.\n4. 그릇에 소면을 담고 국물을 부은 후 고명을 얹어 완성한다.",
+    "ingredients": [
+      {
+        "category": "육수",
+        "name": ["멸치다시마육수", "물"],
+        "amount": [800, 800],
+        "unit": ["ml", "ml"],
+        "is_required": [true, false],
+        "priority": [1, 2]
+      },
+      {
+        "category": "면류",
+        "name": "소면",
+        "amount": 200,
+        "unit": "g",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+        "category": "열매채소/과채류",
+        "name": "애호박",
+        "amount": 50,
+        "unit": "g",
+        "is_required": false,
+        "priority": 2
+      },
+      {
+        "category": "뿌리채소",
+        "name": ["당근", "마늘"],
+        "amount": [20, 2],
+        "unit": ["g", "개"],
+        "is_required": [false, false],
+        "priority": [2, 2]
+      },
+      {
+        "category": "버섯류",
+        "name": "버섯",
+        "amount": 20,
+        "unit": "g",
+        "is_required": false,
+        "priority": 2
+      },
+      {
+        "category": "달걀류",
+        "name": "계란",
+        "amount": 1,
+        "unit": "개",
+        "is_required": false,
+        "priority": 2
+      },
+      {
+        "category": "기본양념",
+        "name": ["국간장", "소금"],
+        "amount": [10, 5],
+        "unit": ["ml", "g"],
+        "is_required": [true, true],
+        "priority": [1, 1]
+      }
+    ]
+  },
+  {
+    "recipe_name": "김치볶음밥",
+"recipe_text": "1. 팬에 기름을 두르고 다진 마늘과 양파, 대파를 볶는다.\n2. 김치를 송송 썰어 넣고 함께 볶는다.\n3. 밥을 넣고 고루 섞으며 볶는다.\n4. 간장, 고추장 등으로 간을 맞추고, 마지막에 참기름을 두른다.",
+    "ingredients": [
+      {
+        "category": "곡류/잡곡",
+        "name": "밥",
+        "amount": 1,
+        "unit": "공기",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+        "category": "조미김/김치류",
+        "name": "김치",
+        "amount": 0.5,
+        "unit": "포기",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+        "category": "잎줄기채소",
+        "name": "대파",
+        "amount": 10,
+        "unit": "g",
+        "is_required": false,
+        "priority": 2
+      },
+      {
+        "category": "뿌리채소",
+        "name": ["마늘", "양파"],
+        "amount": [1, 0.5],
+        "unit": ["개", "개"],
+        "is_required": [true, false],
+        "priority": [2, 2]
+      },
+      {
+  "category": "장류",
+  "name": ["고추장"],
+  "amount": [10],
+  "unit": ["g"],
+  "is_required": [false],
+  "priority": [2]
+},
+{
+  "category": "기본양념",
+  "name": ["간장"],
+  "amount": [5],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [5],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+}
+    ]
+  },
+  {
+    "recipe_name": "오므라이스",
+"recipe_text": "1. 팬에 기름을 두르고 양파, 당근, 햄을 볶는다.\n2. 밥을 넣고 함께 볶아 간장 등으로 간을 맞춘다.\n3. 달걀을 풀어 부드럽게 팬에 부친다.\n4. 볶음밥을 달걀로 감싼다.\n5. 케첩을 뿌려 완성한다.",
+    "ingredients": [
+      {
+        "category": "곡류/잡곡",
+        "name": "밥",
+        "amount": 1,
+        "unit": "공기",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+        "category": "달걀류",
+        "name": "계란",
+        "amount": 2,
+        "unit": "개",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+        "category": "햄/가공육",
+        "name": "햄",
+        "amount": 50,
+        "unit": "g",
+        "is_required": false,
+        "priority": 2
+      },
+      {
+        "category": "뿌리채소",
+        "name": ["양파", "당근"],
+        "amount": [0.5, 10],
+        "unit": ["개", "g"],
+        "is_required": [true, false],
+        "priority": [1, 2]
+      },
+      {
+  "category": "기본양념",
+  "name": ["간장"],
+  "amount": [10],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "소스류",
+  "name": ["케첩"],
+  "amount": [20],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "오일/기름",
+  "name": ["식용유"],
+  "amount": [10],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+}
+    ]
+  },
+  {
+    "recipe_name": "참치마요덮밥",
+"recipe_text": "1. 밥을 준비한다.\n2. 참치캔의 기름을 제거하고 밥 위에 올린다.\n3. 양파, 대파 등 채소를 썬다.\n4. 마요네즈, 간장, 설탕, 고추장 등을 곁들여 섞은 뒤 밥 위에 얹는다.\n5. 김가루, 깨소금 등 고명을 올려 완성한다.",
+    "ingredients": [
+      {
+        "category": "곡류/잡곡",
+        "name": "밥",
+        "amount": 1,
+        "unit": "공기",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+        "category": "캔",
+        "name": "참치캔",
+        "amount": 1,
+        "unit": "캔",
+        "is_required": true,
+        "priority": 1
+      },
+      {
+        "category": "뿌리채소",
+        "name": "양파",
+        "amount": 0.5,
+        "unit": "개",
+        "is_required": false,
+        "priority": 2
+      },
+      {
+        "category": "잎줄기채소",
+        "name": "대파",
+        "amount": 10,
+        "unit": "g",
+        "is_required": false,
+        "priority": 2
+      },
+{
+  "category": "소스류",
+  "name": ["마요네즈"],
+  "amount": [20],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [5, 3],
+  "unit": ["ml", "g"],
+  "is_required": [false, false],
+  "priority": [2, 2]
+},
+{
+  "category": "장류",
+  "name": ["고추장"],
+  "amount": [5],
+  "unit": ["g"],
+  "is_required": [false],
+  "priority": [2]
+},
+      {
+        "category": "조미김/김치류",
+        "name": "김",
+        "amount": 5,
+        "unit": "g",
+        "is_required": false,
+        "priority": 2
+      }
+    ]
+  },
+  {
+  "recipe_name": "치킨마요덮밥",
+"recipe_text": "1. 밥을 그릇에 담는다.\n2. 치킨가라아게 또는 치킨너겟, 혹은 닭가슴살을 잘게 잘라 올린다.\n3. 양파와 대파를 송송 썬다.\n4. 마요네즈, 간장, 설탕, 달걀지단 등을 곁들여 완성한다.",
+  "ingredients": [
+    {
+      "category": "곡류/잡곡",
+      "name": "밥",
+      "amount": 1,
+      "unit": "공기",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육류-닭",
+      "name": ["치킨너겟", "닭가슴살"],
+      "amount": [3, 80],
+      "unit": ["개", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "뿌리채소",
+      "name": "양파",
+      "amount": 0.5,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+  "category": "소스류",
+  "name": ["마요네즈"],
+  "amount": [20],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [5, 3],
+  "unit": ["ml", "g"],
+  "is_required": [true, false],
+  "priority": [1, 2]
+},
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 1,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "알리오올리오파스타",
+"recipe_text": "1. 마늘을 편으로 썬다.\n2. 올리브오일에 마늘을 약불에서 볶아 향을 낸다.\n3. 페페론치노(고추)와 삶은 파스타면을 넣고 볶는다.\n4. 소금, 후추로 간을 맞춘다.\n5. 접시에 담고 파슬리, 치즈 등을 뿌려 완성한다.",
+  "ingredients": [
+    {
+      "category": "면류",
+      "name": "스파게티면",
+      "amount": 100,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "오일/기름",
+      "name": "올리브오일",
+      "amount": 20,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 5,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "복합/즉석양념",
+      "name": "페퍼론치노",
+      "amount": 2,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+    "category": "기본양념",
+    "name": ["소금"],
+    "amount": [2],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
+    {
+      "category": "기타/조미료",
+      "name": "파슬리",
+      "amount": 1,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "감바스",
+"recipe_text": "1. 마늘을 편으로 썬다.\n2. 올리브오일에 마늘을 볶아 향을 낸다.\n3. 새우와 페퍼론치노, 소금, 후추를 넣어 볶는다.\n4. 바게트와 곁들여 먹는다.",
+  "ingredients": [
+    {
+      "category": "해산물",
+      "name": "새우",
+      "amount": 8,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "오일/기름",
+      "name": "올리브오일",
+      "amount": 30,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 5,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "복합/즉석양념",
+      "name": "페퍼론치노",
+      "amount": 2,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+    "category": "기본양념",
+    "name": ["소금"],
+    "amount": [2],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
+    {
+      "category": "떡/빵/기타가공식품",
+      "name": "바게트빵",
+      "amount": 50,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "크림파스타",
+"recipe_text": "1. 마늘과 양파를 다진다.\n2. 팬에 버터를 녹이고 마늘과 양파를 볶는다.\n3. 우유와 생크림, 파스타면을 넣어 끓인다.\n4. 소금, 후추, 파마산치즈 등으로 간을 맞춘다.",
+  "ingredients": [
+    {
+      "category": "면류",
+      "name": "스파게티면",
+      "amount": 100,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "유제품",
+      "name": ["우유", "생크림", "파마산치즈", "버터"],
+      "amount": [100, 50, 10, 10],
+      "unit": ["ml", "g", "g", "g"],
+      "is_required": [true, true, false, true],
+      "priority": [1, 1, 2, 1]
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["마늘", "양파"],
+      "amount": [3, 0.5],
+      "unit": ["개", "개"],
+      "is_required": [true, true],
+      "priority": [1, 1]
+    },
+    {
+    "category": "기본양념",
+    "name": ["소금"],
+    "amount": [2],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  }
+  ]
+},
+{
+  "recipe_name": "토마토파스타",
+"recipe_text": "1. 마늘을 다지고 양파를 썬다.\n2. 올리브오일에 마늘, 양파를 볶다가 토마토소스를 넣고 끓인다.\n3. 삶은 파스타면을 넣어 함께 볶는다.\n4. 소금, 후추 등으로 간을 맞추고 파슬리, 치즈를 곁들인다.",
+  "ingredients": [
+    {
+      "category": "면류",
+      "name": "스파게티면",
+      "amount": 100,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "오일/기름",
+      "name": "올리브오일",
+      "amount": 10,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "소스류",
+      "name": "스파게티소스",
+      "amount": 100,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["마늘", "양파"],
+      "amount": [3, 0.5],
+      "unit": ["개", "개"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+    "category": "기본양념",
+    "name": ["소금"],
+    "amount": [2],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
+    {
+      "category": "기타/조미료",
+      "name": "파슬리",
+      "amount": 1,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "마제소바",
+"recipe_text": "1. 우동면 또는 중화면을 삶아 찬물에 헹궈 준비한다.\n2. 간장, 맛술, 설탕, 참기름, 고추기름 등으로 소스를 만든다.\n3. 다진 돼지고기, 쪽파, 김가루, 계란노른자, 다진마늘, 숙주 등을 준비한다.\n4. 그릇에 면을 담고 소스와 고명, 노른자를 올려 비벼 먹는다.",
+  "ingredients": [
+    {
+      "category": "면류",
+      "name": "우동사리",
+      "amount": 200,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육류-돼지",
+      "name": "돼지고기다짐육",
+      "amount": 50,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "쪽파",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "조미김/김치류",
+      "name": "김자반",
+      "amount": 5,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 1,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+{
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [15, 5],
+  "unit": ["ml", "g"],
+  "is_required": [true, false],
+  "priority": [1, 2]
+},
+{
+  "category": "액체양념",
+  "name": ["맛술", "참기름", "고추기름"],
+  "amount": [10, 5, 3],
+  "unit": ["ml", "ml", "ml"],
+  "is_required": [false, true, false],
+  "priority": [2, 1, 2]
+}
+  ]
+},
+{
+  "recipe_name": "마파두부",
+"recipe_text": "1. 두부를 깍둑썰기하고 끓는 물에 살짝 데친다.\n2. 다진 돼지고기를 볶다가 양파, 대파, 마늘, 고추기름, 두반장, 간장 등을 넣고 볶는다.\n3. 두부와 육수를 넣어 끓인 뒤 전분물로 농도를 맞춘다.",
+  "ingredients": [
+    {
+      "category": "두부/콩/콩가공품",
+      "name": "두부",
+      "amount": 1,
+      "unit": "모",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육류-돼지",
+      "name": "돼지고기다짐육",
+      "amount": 70,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["마늘", "양파"],
+      "amount": [2, 0.5],
+      "unit": ["개", "개"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+  "category": "소스류",
+  "name": ["두반장"],
+  "amount": [10],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "액체양념",
+  "name": ["고추기름"],
+  "amount": [5],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+},
+    {
+    "category": "기본양념",
+    "name": ["간장", "설탕", "소금"],
+    "amount": [10, 3, 2],
+    "unit": ["ml", "g", "g"],
+    "is_required": [true, false, true],
+    "priority": [1, 2, 1]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [true],
+    "priority": [1]
+  },
+  {
+    "category": "분말/가루류",
+    "name": ["감자전분"],
+    "amount": [5],
+    "unit": ["g"],
+    "is_required": [true],
+    "priority": [1]
+  }
+  ]
+},
+{
+  "recipe_name": "고기덮밥",
+"recipe_text": "1. 밥을 준비한다.\n2. 불고기감 소고기 또는 돼지고기를 양파와 함께 간장, 설탕 등 양념에 볶는다.\n3. 밥 위에 고기를 얹고 대파, 깨 등 고명을 올려 완성한다.",
+  "ingredients": [
+    {
+      "category": "곡류/잡곡",
+      "name": "밥",
+      "amount": 1,
+      "unit": "공기",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육류-소",
+      "name": ["소불고기", "소고기채끝살", "차돌박이", "부채살"],
+      "amount": [80, 80, 80, 80],
+      "unit": ["g", "g", "g", "g"],
+      "is_required": [true, false, false, false],
+      "priority": [1, 2, 2, 2]
+    },
+    {
+      "category": "육류-돼지",
+      "name": ["돼지고기목살", "돼지고기다짐육", "돼지고기앞다리살", "돼지고기뒷다리살", "돼지고기안심", "삼겹살", "대패삼겹살", "잡채용 돼지고기"],
+      "amount": [80, 80, 80, 80, 80, 80, 80, 80],
+      "unit": ["g", "g", "g", "g", "g", "g", "g", "g"],
+      "is_required": [false, false, false, false, false, false, false, false],
+      "priority": [2, 2, 2, 2, 2, 2, 2, 2]
+    },
+    {
+      "category": "뿌리채소",
+      "name": "양파",
+      "amount": 0.5,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+    "category": "기본양념",
+    "name": ["간장", "설탕"],
+    "amount": [15, 5],
+    "unit": ["ml", "g"],
+    "is_required": [true, true],
+    "priority": [1, 1]
+  },
+  {
+    "category": "액체양념",
+    "name": ["참기름"],
+    "amount": [3],
+    "unit": ["ml"],
+    "is_required": [false],
+    "priority": [2]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [true],
+    "priority": [1]
+  },
+    {
+      "category": "분말/가루양념",
+      "name": "깨소금",
+      "amount": 1,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "아보카도간장와사비계란밥",
+"recipe_text": "1. 밥을 준비한다.\n2. 아보카도를 슬라이스해서 밥 위에 올린다.\n3. 간장과 와사비를 섞어 밥 위에 뿌린다.\n4. 계란 노른자 또는 반숙 계란을 올려 완성한다.",
+  "ingredients": [
+    {
+      "category": "곡류/잡곡",
+      "name": "밥",
+      "amount": 1,
+      "unit": "공기",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "과일류",
+      "name": "아보카도",
+      "amount": 0.5,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+  "category": "기본양념",
+  "name": ["간장"],
+  "amount": [10],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "복합/즉석양념",
+  "name": ["와사비"],
+  "amount": [2],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 1,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "두부덮밥",
+"recipe_text": "1. 두부를 깍둑썰기해 구워둔다.\n2. 양파, 당근, 피망 등을 썰어 볶는다.\n3. 두부와 채소를 간장, 고추장, 설탕 등으로 양념해 볶는다.\n4. 밥 위에 두부와 채소를 올려 완성한다.",
+  "ingredients": [
+    {
+      "category": "곡류/잡곡",
+      "name": "밥",
+      "amount": 1,
+      "unit": "공기",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "두부/콩/콩가공품",
+      "name": "두부",
+      "amount": 0.5,
+      "unit": "모",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "당근"],
+      "amount": [0.5, 10],
+      "unit": ["개", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "열매채소/과채류",
+      "name": "피망",
+      "amount": 0.3,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+{
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [15, 5],
+  "unit": ["ml", "g"],
+  "is_required": [true, false],
+  "priority": [1, 2]
+},
+{
+  "category": "장류",
+  "name": ["고추장"],
+  "amount": [5],
+  "unit": ["g"],
+  "is_required": [false],
+  "priority": [2]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [3],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+}
+  ]
+},
+{
+  "recipe_name": "야끼소바",
+"recipe_text": "1. 소면 또는 중화면을 삶아둔다.\n2. 양배추, 당근, 양파 등 채소를 썬다.\n3. 돼지고기 또는 해산물을 볶은 뒤 채소와 면을 넣고 볶는다.\n4. 야끼소바 소스 또는 굴소스, 간장 등으로 간을 맞춘다.",
+  "ingredients": [
+    {
+      "category": "면류",
+      "name": "중화면",
+      "amount": 150,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육류-돼지",
+      "name": "돼지고기다짐육",
+      "amount": 40,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "잎줄기채소",
+      "name": ["양배추", "대파"],
+      "amount": [30, 10],
+      "unit": ["g", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["당근", "양파"],
+      "amount": [10, 0.5],
+      "unit": ["g", "개"],
+      "is_required": [false, true],
+      "priority": [2, 1]
+    },
+    {
+  "category": "소스류",
+  "name": ["야끼소바소스", "굴소스"],
+  "amount": [20, 10],
+  "unit": ["g", "g"],
+  "is_required": [true, false],
+  "priority": [1, 2]
+},
+{
+  "category": "기본양념",
+  "name": ["간장"],
+  "amount": [5],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+}
+  ]
+},
+{
+  "recipe_name": "버섯덮밥",
+"recipe_text": "1. 버섯(표고, 느타리 등)을 먹기 좋게 썬다.\n2. 양파, 당근 등 채소도 썬다.\n3. 팬에 채소와 버섯을 볶는다.\n4. 간장, 설탕, 참기름 등으로 양념해 밥 위에 얹는다.",
+  "ingredients": [
+    {
+      "category": "곡류/잡곡",
+      "name": "밥",
+      "amount": 1,
+      "unit": "공기",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "버섯류",
+      "name": ["표고버섯", "느타리버섯", "양송이버섯"],
+      "amount": [20, 20, 20],
+      "unit": ["g", "g", "g"],
+      "is_required": [true, false, false],
+      "priority": [1, 2, 2]
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "당근"],
+      "amount": [0.5, 10],
+      "unit": ["개", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+    "category": "기본양념",
+    "name": ["간장", "설탕"],
+    "amount": [15, 5],
+    "unit": ["ml", "g"],
+    "is_required": [true, true],
+    "priority": [1, 1]
+  },
+  {
+    "category": "액체양념",
+    "name": ["참기름"],
+    "amount": [3],
+    "unit": ["ml"],
+    "is_required": [false],
+    "priority": [2]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [true],
+    "priority": [1]
+  }
+  ]
+},
+{
+  "recipe_name": "유부초밥",
+"recipe_text": "1. 밥에 초밥용 양념(식초, 설탕, 소금)을 섞는다.\n2. 유부를 준비해 물기를 뺀다.\n3. 밥을 유부에 채워넣는다.\n4. 원하는 고명을 올려 완성한다.",
+  "ingredients": [
+    {
+      "category": "곡류/잡곡",
+      "name": "밥",
+      "amount": 1,
+      "unit": "공기",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "두부/콩/콩가공품",
+      "name": "유부",
+      "amount": 6,
+      "unit": "장",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "기본양념",
+      "name": ["식초", "설탕", "소금"],
+      "amount": [10, 7, 1],
+      "unit": ["ml", "g", "g"],
+      "is_required": [true, true, false],
+      "priority": [1, 1, 2]
+    }
+  ]
+},
+{
+  "recipe_name": "콩국수",
+"recipe_text": "1. 콩을 삶아 곱게 갈아 콩국물을 만든다.\n2. 소면을 삶아 찬물에 헹군다.\n3. 그릇에 소면을 담고 콩국물을 부은 뒤 오이, 깨, 소금 등으로 마무리한다.",
+  "ingredients": [
+    {
+      "category": "면류",
+      "name": "소면",
+      "amount": 150,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "두부/콩/콩가공품",
+      "name": "콩",
+      "amount": 100,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "열매채소/과채류",
+      "name": "오이",
+      "amount": 0.3,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "분말/가루양념",
+      "name": "깨소금",
+      "amount": 2,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "기본양념",
+      "name": "소금",
+      "amount": 2,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "제육볶음",
+"recipe_text": "1. 돼지고기를 먹기 좋게 썬다.\n2. 고추장, 고춧가루, 간장, 설탕, 마늘, 생강 등으로 양념장을 만든다.\n3. 양파, 대파, 고추 등 채소를 썬다.\n4. 팬에 모든 재료를 넣고 볶아 완성한다.",
+  "ingredients": [
+    {
+      "category": "육류-돼지",
+      "name": "돼지고기앞다리살",
+      "amount": 200,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "마늘", "생강"],
+      "amount": [0.5, 3, 4],
+      "unit": ["개", "개", "g"],
+      "is_required": [true, true, false],
+      "priority": [1, 1, 2]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "열매채소/과채류",
+      "name": "고추",
+      "amount": 2,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+  "category": "장류",
+  "name": ["고추장"],
+  "amount": [20],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "분말/가루양념",
+  "name": ["고춧가루"],
+  "amount": [10],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [10, 5],
+  "unit": ["ml", "g"],
+  "is_required": [true, true],
+  "priority": [1, 1]
+}
+  ]
+},
+{
+  "recipe_name": "오징어볶음",
+"recipe_text": "1. 오징어를 깨끗이 손질해 먹기 좋은 크기로 썬다.\n2. 양파, 대파, 당근 등 채소를 썬다.\n3. 고추장, 고춧가루, 간장, 설탕, 다진마늘 등으로 양념장을 만든다.\n4. 팬에 오징어와 채소, 양념을 넣고 센 불에서 빠르게 볶는다.",
+  "ingredients": [
+    {
+      "category": "해산물",
+      "name": "오징어",
+      "amount": 1,
+      "unit": "마리",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "당근"],
+      "amount": [0.5, 10],
+      "unit": ["개", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+  "category": "분말/가루양념",
+  "name": ["고춧가루"],
+  "amount": [10],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [10, 5],
+  "unit": ["ml", "g"],
+  "is_required": [true, true],
+  "priority": [1, 1]
+},
+    {
+      "category": "장류",
+      "name": "고추장",
+      "amount": 15,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "두부조림",
+"recipe_text": "1. 두부를 먹기 좋게 썰어 노릇하게 부친다.\n2. 간장, 설탕, 고춧가루, 마늘 등 양념장을 만든다.\n3. 팬에 두부와 양념, 대파를 넣고 조린다.",
+  "ingredients": [
+    {
+      "category": "두부/콩/콩가공품",
+      "name": "두부",
+      "amount": 1,
+      "unit": "모",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [20, 5],
+  "unit": ["ml", "g"],
+  "is_required": [true, true],
+  "priority": [1, 1]
+},
+{
+  "category": "분말/가루양념",
+  "name": ["고춧가루"],
+  "amount": [5],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "뿌리채소",
+  "name": ["마늘"],
+  "amount": [2],
+  "unit": ["개"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [3],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+},
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "닭도리탕",
+"recipe_text": "1. 닭을 손질해 끓는 물에 데친다.\n2. 감자, 당근, 양파 등 채소를 크게 썬다.\n3. 고추장, 간장, 고춧가루, 설탕, 마늘 등으로 양념장을 만든다.\n4. 모든 재료와 양념을 냄비에 넣고 끓인다.",
+  "ingredients": [
+    {
+      "category": "육류-닭",
+      "name": "닭볶음탕용 닭",
+      "amount": 1,
+      "unit": "마리",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["감자", "당근", "양파"],
+      "amount": [4, 50, 0.5],
+      "unit": ["개", "g", "개"],
+      "is_required": [true, false, true],
+      "priority": [1, 2, 1]
+    },
+    {
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [30, 10],
+  "unit": ["ml", "g"],
+  "is_required": [true, true],
+  "priority": [1, 1]
+},
+{
+  "category": "분말/가루양념",
+  "name": ["고춧가루"],
+  "amount": [10],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "뿌리채소",
+  "name": ["마늘"],
+  "amount": [3],
+  "unit": ["개"],
+  "is_required": [true],
+  "priority": [1]
+},
+    {
+      "category": "장류",
+      "name": "고추장",
+      "amount": 30,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "생선조림",
+"recipe_text": "1. 생선을 손질해 냄비에 넣는다.\n2. 무, 양파, 대파 등 채소를 썬다.\n3. 간장, 고추장, 고춧가루, 설탕, 마늘 등으로 양념장을 만든다.\n4. 생선과 채소, 양념, 물을 넣고 끓인다.",
+  "ingredients": [
+    {
+      "category": "해산물",
+      "name": ["고등어", "가자미", "갈치", "조기"],
+      "amount": [1, 1, 1, 1],
+      "unit": ["마리", "마리", "마리", "마리"],
+      "is_required": [false, false, false, false],
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["무", "양파"],
+      "amount": [60, 0.5],
+      "unit": ["g", "개"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [20, 5],
+  "unit": ["ml", "g"],
+  "is_required": [true, true],
+  "priority": [1, 1]
+},
+{
+  "category": "분말/가루양념",
+  "name": ["고춧가루"],
+  "amount": [10],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "뿌리채소",
+  "name": ["마늘"],
+  "amount": [2],
+  "unit": ["개"],
+  "is_required": [true],
+  "priority": [1]
+},
+    {
+      "category": "장류",
+      "name": "고추장",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "가지볶음",
+"recipe_text": "1. 가지를 먹기 좋게 썬다.\n2. 마늘, 양파 등 채소를 썬다.\n3. 팬에 기름을 두르고 가지와 채소, 간장, 고춧가루, 설탕 등 양념을 넣고 볶는다.",
+  "ingredients": [
+    {
+      "category": "열매채소/과채류",
+      "name": "가지",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["마늘", "양파"],
+      "amount": [2, 0.3],
+      "unit": ["개", "개"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [10, 2],
+  "unit": ["ml", "g"],
+  "is_required": [true, false],
+  "priority": [1, 2]
+},
+{
+  "category": "분말/가루양념",
+  "name": ["고춧가루"],
+  "amount": [5],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [2],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+}
+  ]
+},
+{
+  "recipe_name": "애호박볶음",
+"recipe_text": "1. 애호박을 반달 모양으로 썬다.\n2. 양파, 당근, 대파 등 채소도 썬다.\n3. 팬에 기름을 두르고 애호박과 채소, 소금, 다진마늘 등 양념을 넣고 볶는다.",
+  "ingredients": [
+    {
+      "category": "열매채소/과채류",
+      "name": "애호박",
+      "amount": 50,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "당근", "마늘"],
+      "amount": [0.3, 10, 2],
+      "unit": ["개", "g", "개"],
+      "is_required": [false, false, true],
+      "priority": [2, 2, 1]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 5,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+{
+  "category": "기본양념",
+  "name": ["소금"],
+  "amount": [2],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [2],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+}
+  ]
+},
+{
+  "recipe_name": "계란말이",
+"recipe_text": "1. 계란을 풀고 소금, 우유를 섞는다.\n2. 대파, 당근, 양파 등 채소를 다져 넣는다.\n3. 팬에 기름을 두르고 계란물을 여러 번 부어 돌돌 만다.",
+  "ingredients": [
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 3,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "유제품",
+      "name": "우유",
+      "amount": 15,
+      "unit": "ml",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 5,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["당근", "양파"],
+      "amount": [5, 0.2],
+      "unit": ["g", "개"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "기본양념",
+      "name": "소금",
+      "amount": 1,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "생선구이",
+"recipe_text": "1. 생선을 손질해 물기를 뺀다.\n2. 소금과 후추를 뿌려 밑간을 한다.\n3. 팬 또는 오븐에 기름을 두르고 앞뒤로 노릇하게 굽는다.",
+  "ingredients": [
+    {
+      "category": "해산물",
+      "name": ["고등어", "가자미", "갈치", "조기"],
+      "amount": [1, 1, 1, 1],
+      "unit": ["마리", "마리", "마리", "마리"],
+      "is_required": [false, false, false, false],
+      "priority": 1
+    },
+    {
+    "category": "기본양념",
+    "name": ["소금"],
+    "amount": [2],
+    "unit": ["g"],
+    "is_required": [true],
+    "priority": [1]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
+  {
+    "category": "오일/기름",
+    "name": ["식용유"],
+    "amount": [5],
+    "unit": ["ml"],
+    "is_required": [true],
+    "priority": [1]
+  }
+  ]
+},
+{
+  "recipe_name": "두부부침",
+"recipe_text": "1. 두부를 먹기 좋게 썰어 키친타월로 물기를 뺀다.\n2. 소금을 뿌려 밑간한다.\n3. 팬에 기름을 두르고 노릇하게 굽는다.\n4. 간장 양념장과 곁들인다.",
+  "ingredients": [
+    {
+      "category": "두부/콩/콩가공품",
+      "name": "두부",
+      "amount": 1,
+      "unit": "모",
+      "is_required": true,
+      "priority": 1
+    },
+{
+  "category": "기본양념",
+  "name": ["소금"],
+  "amount": [1],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "오일/기름",
+  "name": ["식용유"],
+  "amount": [10],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+},
+    {
+      "category": "기본양념",
+      "name": "간장",
+      "amount": 10,
+      "unit": "ml",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "동그랑땡",
+"recipe_text": "1. 돼지고기, 두부, 양파, 당근, 부추 등을 잘게 다진다.\n2. 달걀, 소금, 후추로 간을 하고 반죽을 만든다.\n3. 반죽을 동그랗게 빚어 밀가루, 달걀옷을 입힌 뒤 노릇하게 부친다.",  "ingredients": [
+    {
+      "category": "육류-돼지",
+      "name": "돼지고기다짐육",
+      "amount": 100,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "두부/콩/콩가공품",
+      "name": "두부",
+      "amount": 0.3,
+      "unit": "모",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "당근"],
+      "amount": [0.3, 10],
+      "unit": ["개", "g"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "부추",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 1,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "분말/가루류",
+      "name": "밀가루",
+      "amount": 20,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+    "category": "기본양념",
+    "name": ["소금"],
+    "amount": [2],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  }
+  ]
+},
+{
+  "recipe_name": "감자전",
+"recipe_text": "1. 감자를 강판에 갈아 물기를 약간 짠다.\n2. 소금으로 간을 하고 부침가루나 밀가루를 넣는다.\n3. 팬에 기름을 두르고 얇게 부쳐 노릇하게 익힌다.",
+  "ingredients": [
+    {
+      "category": "뿌리채소",
+      "name": "감자",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "분말/가루류",
+      "name": "부침가루",
+      "amount": 15,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+{
+  "category": "기본양념",
+  "name": ["소금"],
+  "amount": [2],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "오일/기름",
+  "name": ["식용유"],
+  "amount": [10],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+}
+  ]
+},
+{
+  "recipe_name": "부추전",
+"recipe_text": "1. 부추를 3~4cm 길이로 썬다.\n2. 양파, 당근도 얇게 채 썬다.\n3. 부침가루와 물을 넣고 반죽을 만든다.\n4. 팬에 식용유를 두르고 반죽을 얇게 부쳐 익힌다.",
+  "ingredients": [
+    {
+      "category": "잎줄기채소",
+      "name": "부추",
+      "amount": 30,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "당근"],
+      "amount": [0.3, 10],
+      "unit": ["개", "g"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "분말/가루류",
+      "name": "부침가루",
+      "amount": 25,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "오일/기름",
+      "name": "식용유",
+      "amount": 10,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "김치전",
+"recipe_text": "1. 김치와 김치국물을 잘게 썬다.\n2. 부침가루, 물을 넣어 반죽을 만든다.\n3. 팬에 식용유를 두르고 반죽을 얇게 부쳐 익힌다.",
+  "ingredients": [
+    {
+      "category": "조미김/김치류",
+      "name": "김치",
+      "amount": 0.4,
+      "unit": "포기",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "조미김/김치류",
+      "name": "김치국물",
+      "amount": 20,
+      "unit": "ml",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "분말/가루류",
+      "name": "부침가루",
+      "amount": 30,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "오일/기름",
+      "name": "식용유",
+      "amount": 10,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "멸치볶음",
+"recipe_text": "1. 마른 멸치를 체에 털어 잔가루를 제거한다.\n2. 팬에 기름을 두르고 멸치를 살짝 볶는다.\n3. 설탕, 간장, 물엿 등 양념을 넣고 볶은 뒤 마지막에 참기름과 깨를 뿌린다.",
+  "ingredients": [
+    {
+      "category": "건어물",
+      "name": "마른멸치",
+      "amount": 30,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+{
+  "category": "기본양념",
+  "name": ["설탕", "간장"],
+  "amount": [5, 5],
+  "unit": ["g", "ml"],
+  "is_required": [true, false],
+  "priority": [1, 2]
+},
+{
+  "category": "액체양념",
+  "name": ["물엿", "참기름"],
+  "amount": [10, 3],
+  "unit": ["ml", "ml"],
+  "is_required": [false, true],
+  "priority": [2, 1]
+},
+    {
+      "category": "분말/가루양념",
+      "name": "깨소금",
+      "amount": 2,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "진미채볶음",
+"recipe_text": "1. 진미채를 먹기 좋게 찢는다.\n2. 마요네즈, 고추장, 물엿, 설탕 등 양념을 섞는다.\n3. 팬에 진미채와 양념을 넣고 볶는다.\n4. 마지막에 참기름과 깨를 뿌린다.",
+  "ingredients": [
+    {
+      "category": "건어물",
+      "name": "진미채",
+      "amount": 40,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+{
+  "category": "소스류",
+  "name": ["마요네즈"],
+  "amount": [10],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "기본양념",
+  "name": ["설탕"],
+  "amount": [5],
+  "unit": ["g"],
+  "is_required": [false],
+  "priority": [2]
+},
+{
+  "category": "액체양념",
+  "name": ["물엿"],
+  "amount": [10],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [2],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+},
+    {
+      "category": "장류",
+      "name": "고추장",
+      "amount": 10,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "분말/가루양념",
+      "name": "깨소금",
+      "amount": 2,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "시금치나물",
+"recipe_text": "1. 시금치를 깨끗이 손질해 끓는 물에 데친다.\n2. 찬물에 헹궈 물기를 짜고 먹기 좋게 자른다.\n3. 소금, 다진마늘, 참기름, 깨소금 등으로 무친다.",
+  "ingredients": [
+    {
+      "category": "잎줄기채소",
+      "name": "시금치",
+      "amount": 80,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+  "category": "기본양념",
+  "name": ["소금"],
+  "amount": [2],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [2],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+},
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "분말/가루양념",
+      "name": "깨소금",
+      "amount": 2,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "콩나물무침",
+"recipe_text": "1. 콩나물을 깨끗이 씻어 끓는 물에 데친다.\n2. 찬물에 헹궈 물기를 뺀다.\n3. 소금, 다진마늘, 참기름, 깨소금 등으로 무친다.",
+  "ingredients": [
+    {
+      "category": "두부/콩/콩가공품",
+      "name": "콩나물",
+      "amount": 100,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+  "category": "기본양념",
+  "name": ["소금"],
+  "amount": [2],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [2],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+},
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "분말/가루양념",
+      "name": "깨소금",
+      "amount": 2,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "오이소박이",
+"recipe_text": "1. 오이는 4등분하여 가운데를 십자로 갈라준다.\n2. 소금에 절여 물기를 뺀다.\n3. 부추, 당근, 양파 등 속재료와 고춧가루, 마늘, 새우젓 등 양념을 섞어 오이 사이에 채운다.",
+  "ingredients": [
+    {
+      "category": "열매채소/과채류",
+      "name": "오이",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "부추",
+      "amount": 20,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["당근", "양파"],
+      "amount": [10, 0.2],
+      "unit": ["g", "개"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "액체양념",
+      "name": "새우젓",
+      "amount": 5,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+  "category": "기본양념",
+  "name": ["소금"],
+  "amount": [5],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "분말/가루양념",
+  "name": ["고춧가루"],
+  "amount": [10],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "뿌리채소",
+  "name": ["마늘"],
+  "amount": [2],
+  "unit": ["개"],
+  "is_required": [true],
+  "priority": [1]
+}
+  ]
+},
+{
+  "recipe_name": "토마토계란볶음",
+"recipe_text": "1. 토마토는 먹기 좋게 썬다.\n2. 계란을 풀어 소금으로 간한다.\n3. 팬에 기름을 두르고 계란을 스크램블한 뒤 덜어둔다.\n4. 토마토를 볶다가 계란을 넣고 볶아 완성한다.",
+  "ingredients": [
+    {
+      "category": "열매채소/과채류",
+      "name": "토마토",
+      "amount": 1,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+  "category": "기본양념",
+  "name": ["소금"],
+  "amount": [2],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "오일/기름",
+  "name": ["식용유"],
+  "amount": [10],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+}
+  ]
+},
+{
+  "recipe_name": "감자샐러드",
+"recipe_text": "1. 감자를 삶아 으깬다.\n2. 오이, 당근, 사과, 양파 등 채소와 과일을 잘게 썬다.\n3. 삶은 달걀을 잘게 썬다.\n4. 마요네즈, 소금, 후추로 간해 버무린다.",
+  "ingredients": [
+    {
+  "category": "뿌리채소",
+  "name": ["감자", "당근"],
+  "amount": [4, 30],
+  "unit": ["개", "g"],
+  "is_required": [true, false],
+  "priority": [1, 2]
+},
+{
+  "category": "열매채소/과채류",
+  "name": ["오이"],
+  "amount": [0.5],
+  "unit": ["개"],
+  "is_required": [false],
+  "priority": [2]
+},
+{
+  "category": "과일류",
+  "name": ["사과"],
+  "amount": [30],
+  "unit": ["g"],
+  "is_required": [false],
+  "priority": [2]
+},
+    {
+      "category": "뿌리채소",
+      "name": "양파",
+      "amount": 0.3,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 1,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+    "category": "소스류",
+    "name": ["마요네즈"],
+    "amount": [20],
+    "unit": ["g"],
+    "is_required": [true],
+    "priority": [1]
+  },
+  {
+    "category": "기본양념",
+    "name": ["소금"],
+    "amount": [2],
+    "unit": ["g"],
+    "is_required": [true],
+    "priority": [1]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  }
+  ]
+},
+{
+  "recipe_name": "마늘쫑",
+"recipe_text": "1. 마늘쫑을 4~5cm 길이로 썬다.\n2. 팬에 기름을 두르고 마늘쫑을 볶는다.\n3. 간장, 설탕, 참기름 등으로 간을 맞춘다.",
+  "ingredients": [
+    {
+      "category": "뿌리채소",
+      "name": "마늘쫑",
+      "amount": 50,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [10, 3],
+  "unit": ["ml", "g"],
+  "is_required": [true, false],
+  "priority": [1, 2]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [2],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+}
+  ]
+},
+{
+  "recipe_name": "소불고기",
+"recipe_text": "1. 소고기를 얇게 썰어 양파, 대파, 당근 등과 함께 양념장(간장, 설탕, 다진마늘, 참기름, 후추 등)에 재운다.\n2. 팬에 모든 재료를 넣고 볶아 완성한다.",
+  "ingredients": [
+    {
+      "category": "육류-소",
+      "name": "소불고기",
+      "amount": 200,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "당근"],
+      "amount": [0.5, 10],
+      "unit": ["개", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+    "category": "기본양념",
+    "name": ["간장", "설탕"],
+    "amount": [20, 10],
+    "unit": ["ml", "g"],
+    "is_required": [true, true],
+    "priority": [1, 1]
+  },
+  {
+    "category": "액체양념",
+    "name": ["참기름"],
+    "amount": [3],
+    "unit": ["ml"],
+    "is_required": [true],
+    "priority": [1]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["후추"],
+    "amount": [1],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 5,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "소갈비찜",
+"recipe_text": "1. 소갈비를 찬물에 담가 핏물을 뺀다.\n2. 양파, 당근, 무, 대파 등 채소를 큼직하게 썬다.\n3. 간장, 설탕, 배, 마늘, 참기름 등으로 양념장을 만든다.\n4. 냄비에 모든 재료와 물을 넣고 끓여 익힌다.",
+  "ingredients": [
+    {
+      "category": "육류-소",
+      "name": "소갈비",
+      "amount": 500,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "당근", "무", "마늘"],
+      "amount": [0.5, 20, 40, 5],
+      "unit": ["개", "g", "g", "개"],
+      "is_required": [true, false, true, true],
+      "priority": [1, 2, 1, 1]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "과일류",
+      "name": "배",
+      "amount": 0.5,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [30, 10],
+  "unit": ["ml", "g"],
+  "is_required": [true, false],
+  "priority": [1, 2]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [3],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+}
+  ]
+},
+{
+  "recipe_name": "수육",
+"recipe_text": "1. 돼지고기를 큼직하게 썰어 냄비에 담는다.\n2. 대파, 양파, 마늘, 생강 등과 함께 끓여 익힌다.\n3. 삶아낸 고기는 먹기 좋게 썬다.",
+  "ingredients": [
+    {
+      "category": "육류-돼지",
+      "name": "삼겹살",
+      "amount": 400,
+      "unit": "g",
+      "is_required": false,
+      "priority": 1
+    },
+    {
+      "category": "육류-돼지",
+      "name": "돼지고기앞다리살",
+      "amount": 400,
+      "unit": "g",
+      "is_required": false,
+      "priority": 1
+    },
+    {
+      "category": "육류-돼지",
+      "name": "돼지고기뒷다리살",
+      "amount": 400,
+      "unit": "g",
+      "is_required": false,
+      "priority": 1
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 15,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "마늘", "생강"],
+      "amount": [0.5, 5, 4],
+      "unit": ["개", "개", "g"],
+      "is_required": [true, true, false],
+      "priority": [1, 1, 2]
+    }
+  ]
+},
+{
+  "recipe_name": "당근샐러드",
+"recipe_text": "1. 당근을 곱게 채 썬다.\n2. 소금에 살짝 절여 물기를 뺀다.\n3. 레몬즙, 올리브오일, 설탕 등으로 드레싱을 만들어 버무린다.",
+  "ingredients": [
+    {
+      "category": "뿌리채소",
+      "name": "당근",
+      "amount": 80,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "기본양념",
+      "name": ["소금", "설탕"],
+      "amount": [2, 5],
+      "unit": ["g", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+{
+  "category": "액체양념",
+  "name": ["레몬즙"],
+  "amount": [5],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "오일/기름",
+  "name": ["올리브오일"],
+  "amount": [5],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+}
+  ]
+},
+{
+  "recipe_name": "메추리알장조림",
+"recipe_text": "1. 메추리알을 삶아 껍질을 벗긴다.\n2. 냄비에 메추리알, 간장, 설탕, 물, 마늘, 대파를 넣고 끓인다.\n3. 양념이 졸아들면 참기름을 넣어 완성한다.",
+  "ingredients": [
+    {
+      "category": "달걀류",
+      "name": "메추리알",
+      "amount": 15,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [20, 5],
+  "unit": ["ml", "g"],
+  "is_required": [true, false],
+  "priority": [1, 2]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [2],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+},
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 3,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "계란찜",
+"recipe_text": "1. 계란을 풀어 물, 소금, 다진파, 다진마늘을 넣고 잘 섞는다.\n2. 뚝배기에 계란물을 붓고 약한 불에서 천천히 익힌다.",
+  "ingredients": [
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 3,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "기본양념",
+      "name": "소금",
+      "amount": 2,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 5,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 1,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "육수",
+      "name": "물",
+      "amount": 100,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "미역줄기볶음",
+"recipe_text": "1. 미역줄기를 깨끗이 씻어 물기를 뺀다.\n2. 양파, 당근을 채 썬다.\n3. 팬에 기름을 두르고 미역줄기, 채소, 다진마늘, 소금 등으로 볶아 완성한다.",
+  "ingredients": [
+    {
+      "category": "건어물",
+      "name": "미역줄기",
+      "amount": 80,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "당근", "마늘"],
+      "amount": [0.3, 10, 2],
+      "unit": ["개", "g", "개"],
+      "is_required": [false, false, false],
+      "priority": [2, 2, 2]
+    },
+    {
+  "category": "기본양념",
+  "name": ["소금"],
+  "amount": [2],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "오일/기름",
+  "name": ["식용유"],
+  "amount": [5],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+}
+  ]
+},
+{
+  "recipe_name": "상추겉절이",
+  "recipe_text": "1. 상추를 깨끗이 씻어 물기를 뺀다. 2. 고추장, 식초, 설탕, 다진마늘, 참기름 등으로 양념장을 만든다. 3. 상추와 양념을 가볍게 버무린다.",
+  "ingredients": [
+    {
+      "category": "잎줄기채소",
+      "name": "상추",
+      "amount": 80,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+  "category": "기본양념",
+  "name": ["식초", "설탕"],
+  "amount": [5, 5],
+  "unit": ["ml", "g"],
+  "is_required": [true, false],
+  "priority": [1, 2]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [2],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+},
+    {
+      "category": "장류",
+      "name": "고추장",
+      "amount": 10,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "감자조림",
+"recipe_text": "1. 감자를 깍둑썰기해 물에 담가 전분을 뺀다.\n2. 팬에 기름을 두르고 감자를 볶는다.\n3. 간장, 설탕, 물, 다진마늘을 넣고 졸인다.\n4. 마지막에 참기름, 깨소금으로 마무리한다.",
+  "ingredients": [
+    {
+      "category": "뿌리채소",
+      "name": "감자",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [10, 5],
+  "unit": ["ml", "g"],
+  "is_required": [true, true],
+  "priority": [1, 1]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [2],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+},
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "분말/가루양념",
+      "name": "깨소금",
+      "amount": 2,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "취나물무침",
+"recipe_text": "1. 취나물을 깨끗이 손질해 끓는 물에 데친다.\n2. 찬물에 헹궈 물기를 꼭 짠다.\n3. 소금, 다진마늘, 참기름, 깨소금 등으로 무친다.",
+  "ingredients": [
+    {
+      "category": "잎줄기채소",
+      "name": "취나물",
+      "amount": 80,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+  "category": "기본양념",
+  "name": ["소금"],
+  "amount": [2],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [2],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+},
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "분말/가루양념",
+      "name": "깨소금",
+      "amount": 2,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "고추된장박이",
+"recipe_text": "1. 풋고추를 깨끗이 씻어 꼭지를 제거한다.\n2. 된장, 고춧가루, 마늘, 설탕, 참기름 등으로 양념장을 만든다.\n3. 고추에 양념을 넣고 버무린다.",
+  "ingredients": [
+    {
+      "category": "열매채소/과채류",
+      "name": "풋고추",
+      "amount": 8,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+    "category": "장류",
+    "name": ["된장"],
+    "amount": [15],
+    "unit": ["g"],
+    "is_required": [true],
+    "priority": [1]
+  },
+  {
+    "category": "분말/가루양념",
+    "name": ["고춧가루"],
+    "amount": [5],
+    "unit": ["g"],
+    "is_required": [true],
+    "priority": [1]
+  },
+  {
+    "category": "뿌리채소",
+    "name": ["마늘"],
+    "amount": [2],
+    "unit": ["개"],
+    "is_required": [true],
+    "priority": [1]
+  },
+  {
+    "category": "기본양념",
+    "name": ["설탕"],
+    "amount": [2],
+    "unit": ["g"],
+    "is_required": [false],
+    "priority": [2]
+  },
+  {
+    "category": "액체양념",
+    "name": ["참기름"],
+    "amount": [2],
+    "unit": ["ml"],
+    "is_required": [false],
+    "priority": [2]
+  }
+  ]
+},
+{
+  "recipe_name": "고추장달걀조림",
+"recipe_text": "1. 계란을 삶아 껍질을 벗긴다.\n2. 냄비에 물, 고추장, 간장, 설탕, 마늘 등을 넣어 양념장을 만든다.\n3. 삶은 달걀을 넣고 졸인다.",
+  "ingredients": [
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 4,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [10, 5],
+  "unit": ["ml", "g"],
+  "is_required": [true, true],
+  "priority": [1, 1]
+},
+{
+  "category": "뿌리채소",
+  "name": ["마늘"],
+  "amount": [2],
+  "unit": ["개"],
+  "is_required": [false],
+  "priority": [2]
+},
+    {
+      "category": "장류",
+      "name": "고추장",
+      "amount": 10,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "무생채",
+"recipe_text": "1. 무를 가늘게 채 썬다.\n2. 고춧가루, 설탕, 식초, 다진마늘, 소금, 참기름 등으로 양념장을 만들어 무와 버무린다.",
+  "ingredients": [
+    {
+      "category": "뿌리채소",
+      "name": "무",
+      "amount": 100,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+{
+  "category": "기본양념",
+  "name": ["설탕", "식초", "소금"],
+  "amount": [5, 5, 2],
+  "unit": ["g", "ml", "g"],
+  "is_required": [false, true, true],
+  "priority": [2, 1, 1]
+},
+{
+  "category": "분말/가루양념",
+  "name": ["고춧가루"],
+  "amount": [5],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [2],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+},
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 2,
+      "unit": "개",
+      "is_required": false,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "부추무침",
+"recipe_text": "1. 부추를 4~5cm 길이로 썬다.\n2. 고춧가루, 식초, 설탕, 다진마늘, 소금, 참기름 등으로 양념장을 만들어 부추와 버무린다.",
+  "ingredients": [
+    {
+      "category": "잎줄기채소",
+      "name": "부추",
+      "amount": 50,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+{
+  "category": "기본양념",
+  "name": ["설탕", "식초", "소금"],
+  "amount": [3, 5, 2],
+  "unit": ["g", "ml", "g"],
+  "is_required": [false, true, true],
+  "priority": [2, 1, 1]
+},
+{
+  "category": "분말/가루양념",
+  "name": ["고춧가루"],
+  "amount": [5],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [2],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+},
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 2,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "깐풍두부",
+"recipe_text": "1. 두부를 먹기 좋게 썰어 물기를 제거한 뒤 튀기거나 구워둔다.\n2. 양파, 대파, 마늘, 고추를 썰어 팬에 볶는다.\n3. 두반장, 간장, 설탕, 식초, 고추기름 등 양념을 넣고 볶다가 두부를 넣어 버무린다.",
+  "ingredients": [
+    {
+      "category": "두부/콩/콩가공품",
+      "name": "두부",
+      "amount": 1,
+      "unit": "모",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "마늘"],
+      "amount": [0.3, 2],
+      "unit": ["개", "개"],
+      "is_required": [true, true],
+      "priority": [1, 1]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "열매채소/과채류",
+      "name": "고추",
+      "amount": 1,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+  "category": "소스류",
+  "name": ["두반장"],
+  "amount": [10],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "액체양념",
+  "name": ["고추기름"],
+  "amount": [5],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+},
+    {
+      "category": "기본양념",
+      "name": ["간장", "설탕", "식초"],
+      "amount": [10, 5, 5],
+      "unit": ["ml", "g", "ml"],
+      "is_required": [true, true, false],
+      "priority": [1, 1, 2]
+    }
+  ]
+},
+{
+  "recipe_name": "계란부침",
+"recipe_text": "1. 계란을 풀어 소금, 다진마늘, 쪽파 등을 넣는다.\n2. 팬에 기름을 두르고 한 숟가락씩 떠서 동그랗게 부친다.",
+  "ingredients": [
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "기본양념",
+      "name": "소금",
+      "amount": 1,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "쪽파",
+      "amount": 5,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "오일/기름",
+      "name": "식용유",
+      "amount": 5,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
+{
+  "recipe_name": "고구마맛탕",
+"recipe_text": "1. 고구마를 큼직하게 썰어 물에 담가 전분기를 뺀다.\n2. 팬에 기름을 두르고 고구마를 튀긴다.\n3. 설탕, 올리고당, 물로 만든 시럽에 튀긴 고구마를 넣고 조린다.\n4. 깨소금으로 마무리한다.",
+  "ingredients": [
+    {
+      "category": "뿌리채소",
+      "name": "고구마",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+  "category": "기본양념",
+  "name": ["설탕"],
+  "amount": [20],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "액체양념",
+  "name": ["올리고당"],
+  "amount": [10],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "오일/기름",
+  "name": ["식용유"],
+  "amount": [20],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+},
+    {
+      "category": "분말/가루양념",
+      "name": "깨소금",
+      "amount": 2,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "오꼬노미야끼",
+"recipe_text": "1. 양배추, 대파, 당근 등을 잘게 썬다.\n2. 부침가루, 물, 계란을 섞어 반죽을 만든다.\n3. 팬에 반죽을 얇게 부쳐 익히고, 오꼬노미야끼 소스, 마요네즈, 가쓰오부시, 김가루를 올린다.",
+  "ingredients": [
+    {
+      "category": "잎줄기채소",
+      "name": "양배추",
+      "amount": 50,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+{
+  "category": "잎줄기채소",
+  "name": ["대파"],
+  "amount": [10],
+  "unit": ["g"],
+  "is_required": [false],
+  "priority": [2]
+},
+{
+  "category": "뿌리채소",
+  "name": ["당근"],
+  "amount": [10],
+  "unit": ["g"],
+  "is_required": [false],
+  "priority": [2]
+},
+    {
+      "category": "분말/가루류",
+      "name": "부침가루",
+      "amount": 30,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 1,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "오일/기름",
+      "name": "식용유",
+      "amount": 10,
+      "unit": "ml",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "소스류",
+      "name": ["오꼬노미소스", "마요네즈"],
+      "amount": [10, 10],
+      "unit": ["g", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "건어물",
+      "name": "가쓰오부시",
+      "amount": 5,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "조미김/김치류",
+      "name": "김자반",
+      "amount": 3,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "오뎅볶음",
+"recipe_text": "1. 어묵을 먹기 좋게 썬다.\n2. 양파, 당근, 대파 등을 썬다.\n3. 팬에 식용유를 두르고 모든 재료를 볶다가 간장, 설탕, 물엿 등으로 간을 맞춘다.",
+  "ingredients": [
+    {
+      "category": "떡/빵/기타가공식품",
+      "name": "어묵",
+      "amount": 80,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "당근"],
+      "amount": [0.3, 10],
+      "unit": ["개", "g"],
+      "is_required": [true, false],
+      "priority": [1, 2]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+{
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [10, 5],
+  "unit": ["ml", "g"],
+  "is_required": [true, true],
+  "priority": [1, 1]
+},
+{
+  "category": "액체양념",
+  "name": ["물엿"],
+  "amount": [5],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+},
+{
+  "category": "오일/기름",
+  "name": ["식용유"],
+  "amount": [10],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+}
+  ]
+},
+{
+  "recipe_name": "훈제오리볶음",
+"recipe_text": "1. 훈제오리를 한입 크기로 썬다.\n2. 부추, 양파, 대파, 고추 등 채소를 썬다.\n3. 팬에 기름 없이 훈제오리를 볶다가 채소를 넣고 함께 볶는다.",
+  "ingredients": [
+    {
+      "category": "육류-오리",
+      "name": "훈제오리",
+      "amount": 200,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "부추",
+      "amount": 30,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["양파"],
+      "amount": [0.5],
+      "unit": ["개"],
+      "is_required": [false],
+      "priority": [2]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": "대파",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "열매채소/과채류",
+      "name": "고추",
+      "amount": 1,
+      "unit": "개",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "탕수육",
+"recipe_text": "1. 돼지고기를 먹기 좋게 썰어 전분, 소금, 달걀 등과 반죽한다.\n2. 기름에 두 번 튀겨낸다.\n3. 설탕, 식초, 간장, 물, 채소 등을 넣어 소스를 만든다.\n4. 튀긴 고기 위에 소스를 부어 완성한다.",
+  "ingredients": [
+    {
+      "category": "육류-돼지",
+      "name": "돼지고기등심",
+      "amount": 200,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "분말/가루류",
+      "name": "감자전분",
+      "amount": 40,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "달걀류",
+      "name": "계란",
+      "amount": 1,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+{
+  "category": "기본양념",
+  "name": ["소금"],
+  "amount": [2],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "오일/기름",
+  "name": ["식용유"],
+  "amount": [30],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+},
+    {
+      "category": "뿌리채소",
+      "name": ["양파", "당근"],
+      "amount": [0.3, 10],
+      "unit": ["개", "g"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+  "category": "기본양념",
+  "name": ["설탕", "식초", "간장"],
+  "amount": [20, 15, 10],
+  "unit": ["g", "ml", "ml"],
+  "is_required": [true, true, true],
+  "priority": [1, 1, 1]
+},
+{
+  "category": "육수",
+  "name": ["물"],
+  "amount": [50],
+  "unit": ["ml"],
+  "is_required": [true],
+  "priority": [1]
+}
+  ]
+},
+{
+  "recipe_name": "단호박찜",
+"recipe_text": "1. 단호박을 깨끗이 씻어 씨를 제거하고 먹기 좋게 자른다.\n2. 찜기에 넣어 15~20분간 찐다.\n3. 취향에 따라 꿀이나 설탕을 곁들인다.",
+  "ingredients": [
+    {
+      "category": "열매채소/과채류",
+      "name": "단호박",
+      "amount": 1,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "액체양념",
+      "name": "꿀",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "기본양념",
+      "name": "설탕",
+      "amount": 5,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    }
+  ]
+},
+{
+  "recipe_name": "콘치즈",
+"recipe_text": "1. 옥수수캔의 물을 빼고 팬에 담는다.\n2. 마요네즈, 설탕, 소금 등과 버무린 뒤 모짜렐라치즈를 올린다.\n3. 오븐이나 팬에 치즈가 녹을 때까지 익힌다.",
+  "ingredients": [
+    {
+      "category": "캔",
+      "name": "스위트콘",
+      "amount": 1,
+      "unit": "캔",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "유제품",
+      "name": "모짜렐라치즈",
+      "amount": 50,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+{
+  "category": "소스류",
+  "name": ["마요네즈"],
+  "amount": [15],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "기본양념",
+  "name": ["설탕", "소금"],
+  "amount": [3, 1],
+  "unit": ["g", "g"],
+  "is_required": [false, false],
+  "priority": [2, 2]
+}
+  ]
+},
+{
+  "recipe_name": "잡채",
+"recipe_text": "1. 당면을 삶아 찬물에 헹궈둔다.\n2. 소고기와 각종 채소(당근, 양파, 시금치, 대파, 표고버섯 등)를 채 썬다.\n3. 팬에 소고기와 채소를 볶고, 삶은 당면, 양념을 넣고 볶는다.",
+  "ingredients": [
+    {
+      "category": "면류",
+      "name": "당면",
+      "amount": 100,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+    {
+      "category": "육류-소",
+      "name": "소불고기",
+      "amount": 50,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+      "category": "뿌리채소",
+      "name": ["당근", "양파"],
+      "amount": [15, 0.3],
+      "unit": ["g", "개"],
+      "is_required": [true, true],
+      "priority": [1, 1]
+    },
+    {
+      "category": "잎줄기채소",
+      "name": ["대파", "시금치"],
+      "amount": [10, 20],
+      "unit": ["g", "g"],
+      "is_required": [false, false],
+      "priority": [2, 2]
+    },
+    {
+      "category": "버섯류",
+      "name": "표고버섯",
+      "amount": 10,
+      "unit": "g",
+      "is_required": false,
+      "priority": 2
+    },
+    {
+  "category": "기본양념",
+  "name": ["간장", "설탕"],
+  "amount": [15, 5],
+  "unit": ["ml", "g"],
+  "is_required": [true, false],
+  "priority": [1, 2]
+},
+{
+  "category": "액체양념",
+  "name": ["참기름"],
+  "amount": [3],
+  "unit": ["ml"],
+  "is_required": [false],
+  "priority": [2]
+}
+  ]
+},
+{
+  "recipe_name": "봄동겉절이",
+"recipe_text": "1. 봄동을 깨끗이 씻어 먹기 좋은 크기로 자른다.\n2. 고춧가루, 식초, 설탕, 다진마늘, 액젓, 참기름 등으로 양념장을 만든다.\n3. 봄동과 양념을 가볍게 버무린다.",
+  "ingredients": [
+    {
+      "category": "잎줄기채소",
+      "name": "봄동",
+      "amount": 80,
+      "unit": "g",
+      "is_required": true,
+      "priority": 1
+    },
+{
+  "category": "기본양념",
+  "name": ["식초", "설탕"],
+  "amount": [5, 3],
+  "unit": ["ml", "g"],
+  "is_required": [true, false],
+  "priority": [1, 2]
+},
+{
+  "category": "분말/가루양념",
+  "name": ["고춧가루"],
+  "amount": [5],
+  "unit": ["g"],
+  "is_required": [true],
+  "priority": [1]
+},
+{
+  "category": "액체양념",
+  "name": ["액젓", "참기름"],
+  "amount": [2, 2],
+  "unit": ["ml", "ml"],
+  "is_required": [false, false],
+  "priority": [2, 2]
+},
+    {
+      "category": "뿌리채소",
+      "name": "마늘",
+      "amount": 2,
+      "unit": "개",
+      "is_required": true,
+      "priority": 1
+    }
+  ]
+},
   {
     "recipe_name": "꼬막무침",
     "recipe_text": 
@@ -1405,7 +4896,7 @@
         "category": "액체양념",
         "name": ["참기름"],
         "amount": [5],
-        "unit": ["g"],
+        "unit": ["ml"],
         "is_required": [false],
         "priority": [1]
       }

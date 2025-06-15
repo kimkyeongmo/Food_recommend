@@ -182,18 +182,35 @@ def insert_all_from_cleaned_json(db_path, json_path, categorized_path):
     ingredient_id = 1
 
     for recipe in recipes:
+        recipe_name = recipe['recipe_name']
         for ing in recipe['ingredients']:
             names = ing['name'] if isinstance(ing['name'], list) else [ing['name']]
-            for name in names:
+            unit_list = ing['unit'] if isinstance(ing['unit'], list) else [ing['unit']]
+            for idx, name in enumerate(names):
                 if name not in name_to_category_unit:
                     print(f"❗ {name}이 categorized_ingredients.json에 없습니다. 건너뜀")
                     continue
-                category, unit = name_to_category_unit[name]
+                expected_category, unit = name_to_category_unit[name]
+                recipe_category = ing.get('category')
 
-                # 카테고리 등록
-                if category not in category_id_map:
-                    cur.execute("INSERT INTO category (id, name) VALUES (?, ?)", (category_id, category))
-                    category_id_map[category] = category_id
+                # 레시피 내 category 필드가 있으면 확인
+                recipe_category = ing.get('category')
+                if recipe_category and recipe_category != expected_category:
+                    print(f"❗[{recipe_name}] '{name}'의 카테고리가 불일치합니다: "
+                        f"(레시피='{recipe_category}' vs 기준='{expected_category}'). 건너뜀")
+                    continue
+
+                # ✅ 단위 검증
+                recipe_unit = unit_list[idx] if idx < len(unit_list) else None
+                if recipe_unit and recipe_unit != unit:
+                    print(f"❗[{recipe_name}] '{name}'의 단위가 불일치합니다: "
+                        f"(레시피='{recipe_unit}' vs 기준='{unit}'). 건너뜀")
+                    continue
+                    
+                # 카테고리 등록 (오직 기준 JSON 기준)
+                if expected_category not in category_id_map:
+                    cur.execute("INSERT INTO category (id, name) VALUES (?, ?)", (category_id, expected_category))
+                    category_id_map[expected_category] = category_id
                     category_id += 1
 
                 # 재료 등록
