@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
-import { NativeModules, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import {
+  NativeModules,
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Image
+} from 'react-native';
 import { ItemsProvider } from './context/ItemsContext';
 import MainScreen from './screens/main';
 import ExploreScreen from './screens/explore';
@@ -7,11 +14,10 @@ import RecipeDetailScreen from './screens/recipe_detail';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'Main' | 'Explore' | 'Detail'>('Main');
-  const [selectedRecipeData, setSelectedRecipeData] = useState<any | null>(null); // ✅ recipe 전체 저장
+  const [selectedRecipeData, setSelectedRecipeData] = useState<any | null>(null);
 
   const handleRecipeSelect = async (recipeName: string) => {
     try {
-      // Kotlin 함수 호출
       const detail = await NativeModules.MyModule.getRecipeDetail(recipeName);
       setSelectedRecipeData(detail);
       setActiveTab('Detail');
@@ -28,12 +34,12 @@ export default function App() {
         return (
           <ExploreScreen
             onSelectRecipe={(name: string) => {
-              handleRecipeSelect(name); // ✅ 레시피 선택 시 전체 데이터 가져오기
+              handleRecipeSelect(name);
             }}
           />
         );
       case 'Detail':
-        return <RecipeDetailScreen recipe={selectedRecipeData} />; // ✅ 전체 데이터 전달
+        return <RecipeDetailScreen recipe={selectedRecipeData} />;
       default:
         return <MainScreen />;
     }
@@ -45,12 +51,24 @@ export default function App() {
         <View style={styles.content}>{renderScreen()}</View>
         <View style={styles.tabBar}>
           <TouchableOpacity onPress={() => setActiveTab('Main')} style={styles.tabButton}>
+            <Image
+              source={require('./icon/main.png')}
+              style={styles.icon}
+            />
             <Text style={activeTab === 'Main' ? styles.activeText : styles.inactiveText}>냉장고</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setActiveTab('Explore')} style={styles.tabButton}>
+            <Image
+              source={require('./icon/explore.png')}
+              style={styles.icon}
+            />
             <Text style={activeTab === 'Explore' ? styles.activeText : styles.inactiveText}>레시피 추천</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setActiveTab('Detail')} style={styles.tabButton}>
+            <Image
+              source={require('./icon/detail.png')}
+              style={styles.icon}
+            />
             <Text style={activeTab === 'Detail' ? styles.activeText : styles.inactiveText}>레시피 디테일</Text>
           </TouchableOpacity>
         </View>
@@ -67,18 +85,25 @@ const styles = StyleSheet.create({
     height: 60,
     borderTopWidth: 1,
     borderColor: '#ddd',
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#FFF',
   },
   tabButton: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
+  icon: {
+    width: 22,
+    height: 22,
+    marginBottom: 2,
+  },
   activeText: {
     color: 'blue',
     fontWeight: 'bold',
+    fontSize: 13,
   },
   inactiveText: {
     color: 'gray',
+    fontSize: 13,
   },
 });

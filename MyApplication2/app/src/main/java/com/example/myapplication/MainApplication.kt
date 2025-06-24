@@ -44,7 +44,7 @@ class MainApplication : Application(), ReactApplication {
         }
 
         // ✅ SQLite DB 파일 assets → 내부 저장소 복사
-        copyDatabaseIfNeeded("swRecipe1.db")
+        copyDatabaseIfNeeded("swRecipe2.db")
     }
 
     private fun copyDatabaseIfNeeded(dbName: String) {

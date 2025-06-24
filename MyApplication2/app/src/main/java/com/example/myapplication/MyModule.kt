@@ -39,7 +39,7 @@ class MyModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModu
             }
 
             // 2. DB 열기 및 데이터 수집
-            val dbPath = reactApplicationContext.getDatabasePath("swRecipe1.db").absolutePath
+            val dbPath = reactApplicationContext.getDatabasePath("swRecipe2.db").absolutePath
             val dbDataList = mutableListOf<Map<String, Any>>()
             val nameToIdMap = mutableMapOf<String, Int>()
             var db: SQLiteDatabase? = null
@@ -166,7 +166,7 @@ class MyModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModu
     @ReactMethod
     fun getRecipeDetail(recipeName: String, promise: Promise) {
         try {
-            val dbPath = reactApplicationContext.getDatabasePath("swRecipe1.db").absolutePath
+            val dbPath = reactApplicationContext.getDatabasePath("swRecipe2.db").absolutePath
             val db = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READONLY)
 
             // 1. 레시피 ID 및 설명 조회
@@ -242,7 +242,7 @@ class MyModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModu
             recipeCursor.close()
             db.close()
         } catch (e: Exception) {
-            Log.e("MyModule", "🔥 getRecipeDetail 오류: ${e.message}")
+            Log.e("MyModule", " getRecipeDetail 오류: ${e.message}")
             promise.reject("DB_ERROR", e.message)
         }
     }
