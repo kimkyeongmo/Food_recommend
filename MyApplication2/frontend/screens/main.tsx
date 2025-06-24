@@ -274,9 +274,12 @@
 
 import React, { useState } from "react";
 import {
+  Dimensions,
   FlatList,
+  Image,
   KeyboardAvoidingView,
   Modal,
+  NativeModules,
   Platform,
   ScrollView,
   StyleSheet,
@@ -284,11 +287,11 @@ import {
   TextInput,
   TouchableOpacity,
   View,
-  Image,
-  NativeModules
 } from "react-native";
 import categorizedRaw from "../DB/db_cleaner/categorized_ingredients.json";
 import { useItems } from "../context/ItemsContext";
+
+const MODAL_MAX_HEIGHT = Dimensions.get('window').height * 0.8; //모달창 크기 조절 제한
 
 const categorized = categorizedRaw as {
   [category: string]: { [name: string]: string };
@@ -504,7 +507,7 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.15)",
     alignItems: "center", justifyContent: "center", zIndex: 9999
   },
-  modalBox: { backgroundColor: "#fff", borderRadius: 18, padding: 20, width: 310, elevation: 6 },
+  modalBox: { backgroundColor: "#fff", borderRadius: 18, padding: 20, width: 310, elevation: 6, maxHeight: MODAL_MAX_HEIGHT },
   modalTitle: { fontSize: 18, fontWeight: "bold", marginBottom: 14, textAlign: "center" },
   catGridWrap: {
     paddingBottom: 12,

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FlatList, StyleSheet, Text, View, NativeModules, TouchableOpacity } from "react-native";
+import { FlatList, NativeModules, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useItems } from "../context/ItemsContext";
 
 // ===== 타입 정의 =====
